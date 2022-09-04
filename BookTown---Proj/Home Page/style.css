@@ -1,1 +1,56 @@
 @import url(../CSS/reset.css);
+@import url(../CSS/Utiles.css);
+
+.container {
+    margin: 0 auto;
+}
+
+.row-2 {
+    background: url(../IMG/deafults/bookcase-img.jpg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.in-img-text h1, .in-img-text h3 {
+    color: rgba(255, 255, 255, 0.895);
+    transition: all ease .3s;
+}
+
+.in-img-text h1:hover , .in-img-text h3:hover {
+    color: #dc3545;
+}
+
+
+.nav-bar  {
+    height: 4.7rem;
+}
+
+.nav-bar li {
+    transition: all ease .2s;
+}
+
+.nav-bar .categorie:hover {
+    height: 5rem;
+    font-size: 2.8rem;
+    border-radius: 0 0 .5rem .5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 .6rem 1.2rem -.2rem,
+        rgba(0, 0, 0, 0.3) 0 .3rem .7rem -.3rem;
+}
+
+.nav-bar a{
+    border-radius: inherit;
+    line-height: 4.7rem;
+}
+
+.upper-main-body .img {
+    background: url(../IMG/deafults/unsplash_akocAO9QCHM.jpg) no-repeat center;
+    background-size: cover;
+    width: 90rem;
+    min-height: 39.6rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.upper-main-body .img:hover {
+    filter: brightness(90%);
+}
+

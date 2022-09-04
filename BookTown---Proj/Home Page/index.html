@@ -18,18 +18,22 @@
   <body>
     <header class="main-header">
       <section
-        class="row-1 d-flex flex-wrap-md justify-content-between w-100 align-items-center py-4 px-5"
+        class="row-1 d-flex  flex-wrap-reverse flex-sm-nowrap justify-content-between align-content-center align-items-center py-4"
       >
-        <a class="d-none d-md-block" href="./index.html">
+        <a class="d-none d-md-block ms-5" href="./index.html">
           <img
-            class="logo-name w-50"
+            class="logo-name w-50 img-fluid"
             src="../IMG/deafults/logo-name.svg"
             alt="logo and name of website"
           />
         </a>
-        <nav class="navbar bg-light align-self-center me-sm-5 pe-lg-5">
+        <a class="d-none d-sm-block d-md-none me-4 pb-1" href="./index.html">
+          <i role="button" class="bi bi-house-door-fill text-danger fs-32 ps-2">
+          </i>
+        </a>
+        <nav class="navbar flex-grow-1 bg-light align-self-center me-sm-5 pe-lg-5">
           <div class="container-fluid me-sm-5 pe-sm-5">
-            <form class="d-flex me-sm-5 pe-sm-5" role="search">
+            <form class="d-flex me-sm-5 pe-sm-5 w-100" role="search">
               <input
                 class="form-control me-sm-2 w-100 border-danger border-opacity-25"
                 type="search"
@@ -42,7 +46,12 @@
             </form>
           </div>
         </nav>
-        <div class="personal-profile d-flex gap-3 align-content-center justify-content-center">
+        <div class="personal-profile d-flex gap-3 align-items-center justify-content-center me-5">
+          <a href="./index.html">
+            <i role="button" class="bi bi-house-door-fill text-danger fs-32 ps-2 d-block d-sm-none">
+            </i>
+          </a>
+          
           <a class="link" href="#" target="_blank" rel="noopener noreferrer">
             <button type="button" class="btn btn-outline-danger">
                 <svg class="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
@@ -59,42 +68,261 @@
             Profile
           </button>
         </a>
+          <i class="bi bi-list fs-32 ps-2 d-block d-sm-none"></i>
         </div>
           </div>
         </div>
       </section>
-      <section class="row-2">
-        <div class="header-img">
-          <div class="in-img-text">
-            <h1>welcome to the town of books</h1>
-            <h3>easily find and purchase your favorite books</h3>
+      <section class="row-2 py-5 d-none d-sm-block">
+        <div class="header-img p-5">
+          <div class="in-img-text bg-dark bg-opacity-25 my-5 p-5 d-flex flex-column justify-content-center gap-4">
+            <h1 class="fs-46 align-self-center">welcome to the town of books</h1>
+            <h3 class="fs-24 d-none d-md-block align-self-center ps-md-5 ms-md-5">easily find and purchase your favorite books.</h3>
           </div>
         </div>
-        <div class="right-side"></div>
       </section>
-
-      <ul class="nav-bar shadow-2">
-        <li class="categorie">
-          <a href="#" target="_blank" rel="noopener noreferrer">categorie</a>
+      <section class="row-3">
+      <ul class="nav-bar list-unstyled d-none d-sm-flex">
+        <li class="categorie flex-grow-1 fs-24 text-center">
+          <a class="w-100 h-100 d-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10" href="#" target="_blank" rel="noopener noreferrer">categorie</a>
         </li>
-        <li class="categorie">
-          <a href="#" target="_blank" rel="noopener noreferrer">categorie</a>
+        <li class="categorie flex-grow-1 fs-24 text-center">
+          <a class="w-100 h-100 d-inline-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10" href="#" target="_blank" rel="noopener noreferrer">categorie</a>
         </li>
-        <li class="categorie">
-          <a href="#" target="_blank" rel="noopener noreferrer">categorie</a>
+        <li class="categorie flex-grow-1 fs-24 text-center">
+          <a class="w-100 h-100 d-inline-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10" href="#" target="_blank" rel="noopener noreferrer">categorie</a>
         </li>
-        <li class="categorie">
-          <a href="#" target="_blank" rel="noopener noreferrer">categorie</a>
+        <li class="categorie flex-grow-1 fs-24 text-center">
+          <a class="w-100 h-100 d-inline-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10" href="#" target="_blank" rel="noopener noreferrer">categorie</a>
         </li>
-        <li class="article">
-          <a href="#" target="_blank" rel="noopener noreferrer">articles</a>
+        <li class="categorie flex-grow-1 fs-24 text-center">
+          <a class="w-100 h-100 d-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10" href="#" target="_blank" rel="noopener noreferrer">categorie</a>
         </li>
       </ul>
+    </section>
     </header>
-    <main class="main-body container">
-      <section class="pop-up-img"></section>
-      <section class="last-articles"></section>
-      <section class="best-sells"></section>
+
+    <main class="main-body container mt-5 d-flex flex-column gap-5">
+        <!-- card component here -->
+        <section class="upper-main-body d-flex flex-column flex-xl-row gap-5 justify-content-start w-100">
+          <div class="img d-none d-lg-block"></div>
+          <!-- card- component here -->
+          <div class="newest-book d-none d-xl-flex gap-5 align-items-center justify-content-center border border-2 border-danger rounded-4 border-opacity-50 p-3">
+            <div class="card d-flex flex-column align-items-center" style="width: 18rem;border: none;">
+              <img src="../IMG/deafults/best.png" class="card-img-top" alt="image of a book">
+              <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title fs-24">Newest Book</h5>
+              </div>
+            </div>
+            <div class="cardborder d-flex flex-column align-items-center border-start border-2 border-danger border-opacity-25 p-4" style="width: 18rem;">
+              <img src="../IMG/books/418FcoJLnXL._AC_SX184_.jpg" style="width: 8rem;" class="card-img-top" alt="image of a book">
+              <div class="card-body d-flex flex-column align-items-center gap-1 mt-3">
+                <h5 class="card-title">The good nurse</h5>
+                <div class="rating d-flex justify-content-center gap-1 mb-1">
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                </div>
+                <a href="#" class="btn btn-danger">
+                  Add to basket
+                  <i class="bi bi-bag"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="newest-books d-flex flex-column justify-content-center align-items-center flex-sm-row flex-wrap flex-lg-nowrap flex-grow-1 w-100 d-xl-none gap-3 border border-2 border-danger rounded-4 border-opacity-50 p-3">
+            <div class="card ps-1 d-flex justify-content-center" style="width: 18rem;border: none;">
+              <img src="../IMG/deafults/best.png" class="card-img-top" alt="image of a book">
+              <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title fs-18 ">Newest Books</h5>
+              </div>
+            </div>
+            <div class="cardborder p-4 border border-1 border-danger border-opacity-25 rounded" style="width: 18rem;">
+              <img src="../IMG/books/418FcoJLnXL._AC_SX184_.jpg" class="card-img-top" alt="image of a book">
+              <div class="card-body d-flex flex-column align-items-center gap-1 mt-3">
+                <h5 class="card-title">The good nurse</h5>
+                <div class="rating d-flex justify-content-center gap-1 mb-1">
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                </div>
+                <a href="#" class="btn btn-danger">
+                  Add to basket
+                  <i class="bi bi-bag"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cardborder p-4 border border-1 border-danger border-opacity-25 rounded" style="width: 18rem;">
+              <img src="../IMG/books/418FcoJLnXL._AC_SX184_.jpg" class="card-img-top" alt="image of a book">
+              <div class="card-body d-flex flex-column align-items-center gap-1 mt-3">
+                <h5 class="card-title">The good nurse</h5>
+                <div class="rating d-flex justify-content-center gap-1 mb-1">
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                </div>
+                <a href="#" class="btn btn-danger">
+                  Add to basket
+                  <i class="bi bi-bag"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cardborder p-4 border border-1 border-danger border-opacity-25 rounded" style="width: 18rem;">
+              <img src="../IMG/books/418FcoJLnXL._AC_SX184_.jpg" class="card-img-top" alt="image of a book">
+              <div class="card-body d-flex flex-column align-items-center gap-1 mt-3">
+                <h5 class="card-title">The good nurse</h5>
+                <div class="rating d-flex justify-content-center gap-1 mb-1">
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                </div>
+                <a href="#" class="btn btn-danger">
+                  Add to basket
+                  <i class="bi bi-bag"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cardborder p-4 border border-1 border-danger border-opacity-25 rounded" style="width: 18rem;">
+              <img src="../IMG/books/418FcoJLnXL._AC_SX184_.jpg" class="card-img-top" alt="image of a book">
+              <div class="card-body d-flex flex-column align-items-center gap-1 mt-3">
+                <h5 class="card-title">The good nurse</h5>
+                <div class="rating d-flex justify-content-center gap-1 mb-1">
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                </div>
+                <a href="#" class="btn btn-danger">
+                  Add to basket
+                  <i class="bi bi-bag"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cardborder p-4 border border-1 border-danger border-opacity-25 rounded" style="width: 18rem;">
+              <img src="../IMG/books/418FcoJLnXL._AC_SX184_.jpg" class="card-img-top" alt="image of a book">
+              <div class="card-body d-flex flex-column align-items-center gap-1 mt-3">
+                <h5 class="card-title">The good nurse</h5>
+                <div class="rating d-flex justify-content-center gap-1 mb-1">
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                  <i role="button" class="bi bi-star"></i>
+                </div>
+                <a href="#" class="btn btn-danger">
+                  Add to basket
+                  <i class="bi bi-bag"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- card- component here -->
+        </section>
+        <!-- card component here -->
+      <section class="best-sells">
+        <div class="latest-books d-flex flex-column justify-content-center align-items-center flex-sm-row flex-wrap flex-lg-nowrap flex-grow-1 w-100 gap-3 border border-2 border-danger rounded-4 border-opacity-50 p-3">
+          <div class="card ps-1 d-flex justify-content-center" style="width: 18rem;border: none;">
+            <img src="../IMG/deafults/best.png" class="card-img-top" alt="image of a book">
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="card-title fs-18 ">Newest Books</h5>
+            </div>
+          </div>
+          <div class="cardborder p-4 border border-1 border-danger border-opacity-25 rounded" style="width: 18rem;">
+            <img src="../IMG/books/418FcoJLnXL._AC_SX184_.jpg" class="card-img-top" alt="image of a book">
+            <div class="card-body d-flex flex-column align-items-center gap-1 mt-3">
+              <h5 class="card-title">The good nurse</h5>
+              <div class="rating d-flex justify-content-center gap-1 mb-1">
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+              </div>
+              <a href="#" class="btn btn-danger">
+                Add to basket
+                <i class="bi bi-bag"></i>
+              </a>
+            </div>
+          </div>
+          <div class="cardborder p-4 border border-1 border-danger border-opacity-25 rounded" style="width: 18rem;">
+            <img src="../IMG/books/418FcoJLnXL._AC_SX184_.jpg" class="card-img-top" alt="image of a book">
+            <div class="card-body d-flex flex-column align-items-center gap-1 mt-3">
+              <h5 class="card-title">The good nurse</h5>
+              <div class="rating d-flex justify-content-center gap-1 mb-1">
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+              </div>
+              <a href="#" class="btn btn-danger">
+                Add to basket
+                <i class="bi bi-bag"></i>
+              </a>
+            </div>
+          </div>
+          <div class="cardborder p-4 border border-1 border-danger border-opacity-25 rounded" style="width: 18rem;">
+            <img src="../IMG/books/418FcoJLnXL._AC_SX184_.jpg" class="card-img-top" alt="image of a book">
+            <div class="card-body d-flex flex-column align-items-center gap-1 mt-3">
+              <h5 class="card-title">The good nurse</h5>
+              <div class="rating d-flex justify-content-center gap-1 mb-1">
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+              </div>
+              <a href="#" class="btn btn-danger">
+                Add to basket
+                <i class="bi bi-bag"></i>
+              </a>
+            </div>
+          </div>
+          <div class="cardborder p-4 border border-1 border-danger border-opacity-25 rounded" style="width: 18rem;">
+            <img src="../IMG/books/418FcoJLnXL._AC_SX184_.jpg" class="card-img-top" alt="image of a book">
+            <div class="card-body d-flex flex-column align-items-center gap-1 mt-3">
+              <h5 class="card-title">The good nurse</h5>
+              <div class="rating d-flex justify-content-center gap-1 mb-1">
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+              </div>
+              <a href="#" class="btn btn-danger">
+                Add to basket
+                <i class="bi bi-bag"></i>
+              </a>
+            </div>
+          </div>
+          <div class="cardborder p-4 border border-1 border-danger border-opacity-25 rounded" style="width: 18rem;">
+            <img src="../IMG/books/418FcoJLnXL._AC_SX184_.jpg" class="card-img-top" alt="image of a book">
+            <div class="card-body d-flex flex-column align-items-center gap-1 mt-3">
+              <h5 class="card-title">The good nurse</h5>
+              <div class="rating d-flex justify-content-center gap-1 mb-1">
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+                <i role="button" class="bi bi-star"></i>
+              </div>
+              <a href="#" class="btn btn-danger">
+                Add to basket
+                <i class="bi bi-bag"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="best-deals"></section>
       <section class="last-books"></section>
       <section class="philosophy-img-pop-up"></section>
