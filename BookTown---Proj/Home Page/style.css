@@ -41,16 +41,7 @@
     line-height: 4.7rem;
 }
 
-.upper-main-body .img {
-    background: url(../IMG/deafults/unsplash_akocAO9QCHM.jpg) no-repeat center;
-    background-size: cover;
-    width: 90rem;
-    min-height: 39.6rem;
-    border-radius: 1.5rem;
-    overflow: hidden;
-}
-
-.upper-main-body .img:hover {
+.upper-main-body .carousel:hover {
     filter: brightness(90%);
 }
 
@@ -116,18 +107,7 @@ h2::after {
 .carousel .item h4, .carousel .item p, .carousel .item ul {
 	margin-bottom: 5px;
 }
-.carousel .thumb-content .btn {
-	color: #dc3545;
-	font-size: 11px;
-	text-transform: uppercase;
-	font-weight: bold;
-	background: none;
-	border: 1px solid #dc3545;
-	padding: 6px 14px;
-	margin-top: 5px;
-	line-height: 16px;
-	border-radius: 20px;
-}
+
 .carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {
 	color: #fff;
 	background: #dc3545;
@@ -193,7 +173,7 @@ h2::after {
 .carousel-indicators li.active {	
 	background: rgba(0, 0, 0, 0.6);
 }
-.carousel .wish-icon {
+.wish-icon {
 	position: absolute;
 	right: 10px;
 	top: 10px;
@@ -202,7 +182,7 @@ h2::after {
 	font-size: 16px;
 	color: #abb0b8;
 }
-.carousel .wish-icon .fa-heart {
+.wish-icon .fa-heart {
 	color: #ff6161;
 }
 .star-rating li {
@@ -213,4 +193,6 @@ h2::after {
 	color: #ffc000;
 }
 
-
+.cardborder .wish-icon {
+	right: -.7rem;
+}
