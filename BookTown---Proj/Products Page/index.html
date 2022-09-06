@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./style.css">
     <title>BookTown Products</title>
 </head>
@@ -92,65 +93,173 @@
         </section>
     </header>
 
-    <section class="main-body">
-        
-        <div class="main">
+    <section class="main-body d-flex flex-column align-items-center justify-content-center gap-4 pb-5 pt-5 container">
+        <div class="dropdown align-self-start ms-5 ps-5">
+            <button class="btn btn-outline-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Sorted by <span class="sorted-by"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Cheapest to most expensive</a></li>
+                <li><a class="dropdown-item" href="#">to most expensive Cheapest</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+        <div class="main d-flex flex-column flex-sm-row justify-content-between flex-wrap gap-5">
+            <div class="thumb-wrapper d-flex flex-column">
+                <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                <div class="img-box">
+                    <img src="../IMG/books/419ya13O0RL._AC_SX184_.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="thumb-content">
+                    <h4>MADDY</h4>
+                    <div class="star-rating">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                    </div>
+                    <p class="item-price"><b>$36.00</b></p>
+                    <a href="#" class="btn btn-danger  text-light">Add to Cart <i class="bi bi-bag"></i></a>
+                </div>
+            </div>
+            <div class="thumb-wrapper d-flex flex-column">
+                <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                <div class="img-box">
+                    <img src="../IMG/books/419ya13O0RL._AC_SX184_.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="thumb-content">
+                    <h4>MADDY</h4>
+                    <div class="star-rating">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                    </div>
+                    <p class="item-price"><b>$36.00</b></p>
+                    <a href="#" class="btn btn-danger  text-light">Add to Cart <i class="bi bi-bag"></i></a>
+                </div>
+            </div>
+            <div class="thumb-wrapper d-flex flex-column">
+                <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                <div class="img-box">
+                    <img src="../IMG/books/419ya13O0RL._AC_SX184_.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="thumb-content">
+                    <h4>MADDY</h4>
+                    <div class="star-rating">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                    </div>
+                    <p class="item-price"><b>$36.00</b></p>
+                    <a href="#" class="btn btn-danger  text-light">Add to Cart <i class="bi bi-bag"></i></a>
+                </div>
+            </div>
+            <div class="thumb-wrapper d-flex flex-column">
+                <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                <div class="img-box">
+                    <img src="../IMG/books/419ya13O0RL._AC_SX184_.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="thumb-content">
+                    <h4>MADDY</h4>
+                    <div class="star-rating">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                    </div>
+                    <p class="item-price"><b>$36.00</b></p>
+                    <a href="#" class="btn btn-danger  text-light">Add to Cart <i class="bi bi-bag"></i></a>
+                </div>
+            </div>
+            <div class="thumb-wrapper d-flex flex-column">
+                <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                <div class="img-box">
+                    <img src="../IMG/books/419ya13O0RL._AC_SX184_.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="thumb-content">
+                    <h4>MADDY</h4>
+                    <div class="star-rating">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                    </div>
+                    <p class="item-price"><b>$36.00</b></p>
+                    <a href="#" class="btn btn-danger  text-light">Add to Cart <i class="bi bi-bag"></i></a>
+                </div>
+            </div>
+            <div class="thumb-wrapper d-flex flex-column">
+                <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                <div class="img-box">
+                    <img src="../IMG/books/419ya13O0RL._AC_SX184_.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="thumb-content">
+                    <h4>MADDY</h4>
+                    <div class="star-rating">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                    </div>
+                    <p class="item-price"><b>$36.00</b></p>
+                    <a href="#" class="btn btn-danger  text-light">Add to Cart <i class="bi bi-bag"></i></a>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer class="bg-light text-center text-white mt-5">
         <div class="container p-4 pb-0 border-top border-1 border-danger border-opacity-25">
-          <section class="mb-4">
-            <a
-              class="btn btn-primary btn-floating m-1"
-              style="background-color: #55acee;"
-              href="https://twitter.com/ettehadnejad"
-              role="button"
-              ><i class="bi bi-twitter"></i
-            ></a>
-      
-            <a
-              class="btn btn-primary btn-floating m-1"
-              style="background-color: #dd4b39;"
-              href="https://mail.google.com/mail/u/0/?hl=fr#search/mahdi.ettehad85%40gmail.com"
-              role="button"
-              ><i class="bi bi-google"></i
-            ></a>
-      
-            <a
-              class="btn btn-primary btn-floating m-1"
-              style="background-color: #ac2bac;"
-              href="https://www.instagram.com/mahdi__ettehad/"
-              role="button"
-              ><i class="bi bi-instagram"></i
-            ></a>
-      
-            <a
-              class="btn btn-primary btn-floating m-1"
-              style="background-color: #0082ca;"
-              href="https://www.linkedin.com/in/mahdi-ettehadnejad-86a0b323a/"
-              role="button"
-              ><i class="bi bi-linkedin"></i
-            ></a>
-            <a
-              class="btn btn-primary btn-floating m-1"
-              style="background-color: #333333;"
-              href="https://github.com/mahdi-Eth"
-              role="button"
-              ><i class="bi bi-github"></i
-            ></a>
-          </section>
+            <section class="mb-4">
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee;"
+                    href="https://twitter.com/ettehadnejad" role="button"><i class="bi bi-twitter"></i></a>
+
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;"
+                    href="https://mail.google.com/mail/u/0/?hl=fr#search/mahdi.ettehad85%40gmail.com" role="button"><i
+                        class="bi bi-google"></i></a>
+
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;"
+                    href="https://www.instagram.com/mahdi__ettehad/" role="button"><i class="bi bi-instagram"></i></a>
+
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;"
+                    href="https://www.linkedin.com/in/mahdi-ettehadnejad-86a0b323a/" role="button"><i
+                        class="bi bi-linkedin"></i></a>
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;"
+                    href="https://github.com/mahdi-Eth" role="button"><i class="bi bi-github"></i></a>
+            </section>
         </div>
         <div class="text-center p-3 fs-18" style="background-color: rgba(0, 0, 0, 0.2);">
-          Creator :
-          <a class="text-white" href="https://github.com/mahdi-Eth">Mahdi Ettehadnejad</a>
+            Creator :
+            <a class="text-white" href="https://github.com/mahdi-Eth">Mahdi Ettehadnejad</a>
         </div>
-      </footer>
+    </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-        <script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

@@ -3,6 +3,53 @@
 @import url(../Home-Page/style.css);
 
 
+.main-header {
+    height: 12rem;
+}
+
 .main-body {
-    margin-top:12.9rem;
+    margin-top: 12.9rem;
+}
+
+.thumb-wrapper {
+	padding: 2.5rem 1.5rem;
+	background: #fff;
+	border-radius: .6rem;
+	text-align: center;
+	position: relative;
+	box-shadow: 0 .2rem .3rem rgba(0,0,0,0.2);
+}
+.thumb-wrapper h4 {
+	font-size: 1.8rem;
+}
+.thumb-wrapper h4, .thumb-wrapper .item p, .thumb-wrapper .item ul {
+	margin-bottom: .5rem;
+	margin-top: 1.0rem;
+}
+.thumb-content .btn:hover, .thumb-content .btn:focus {
+	color: #fff;
+	background: #dc3546e2;
+}
+.wish-icon {
+	position: absolute;
+	right: 1.0rem;
+	top: 1.0rem;
+	z-index: 99;
+	cursor: pointer;
+	font-size: 1.6rem;
+	color: #abb0b8;
+}
+.wish-icon .fa-heart {
+	color: #ff6161;
+}
+.star-rating li {
+	padding: 0;
+}
+.star-rating i {
+	font-size: 1.4rem;
+	color: #ffc000;
+}
+
+.cardborder .wish-icon {
+	right: -.7rem;
 }

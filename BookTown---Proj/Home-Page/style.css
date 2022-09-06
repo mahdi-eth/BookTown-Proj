@@ -1,10 +1,6 @@
 @import url(../CSS/reset.css);
 @import url(../CSS/Utiles.css);
 
-.container {
-    margin: 0 auto;
-}
-
 .row-2 {
     background: url(../IMG/deafults/bookcase-img.jpg.jpg) center no-repeat;
     background-size: cover;
@@ -48,47 +44,47 @@
 
 h2 {
 	color: #000;
-	font-size: 26px;
+	font-size: 2.6rem;
 	font-weight: 300;
 	text-align: center;
 	text-transform: uppercase;
 	position: relative;
-	margin: 30px 0 60px;
+	margin: 3.0rem 0 6.0rem;
 }
 h2::after {
 	content: "";
-	width: 100px;
+	width: 10.0rem;
 	position: absolute;
 	margin: 0 auto;
-	height: 4px;
-	border-radius: 1px;
+	height: .4rem;
+	border-radius: .1rem;
 	background: #dc3545;
 	left: 0;
 	right: 0;
-	bottom: -20px;
+	bottom: -2.0rem;
 }
 
 .carousel {
-	margin: 50px auto;
-	padding: 0 70px;
+	margin: 5.0rem auto;
+	padding: 0 7.0rem;
 }
 .carousel .item {
 	color: #747d89;
-	min-height: 325px;
+	min-height: 32.5rem;
 	text-align: center;
 	overflow: hidden;
 }
 .carousel .thumb-wrapper {
-	padding: 25px 15px;
+	padding: 2.5rem 1.5rem;
 	background: #fff;
-	border-radius: 6px;
+	border-radius: .6rem;
 	text-align: center;
 	position: relative;
-	box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+	box-shadow: 0 .2rem .3rem rgba(0,0,0,0.2);
 }
 .carousel .item .img-box {
-	height: 120px;
-	margin-bottom: 20px;
+	height: 12.0rem;
+	margin-bottom: 2.0rem;
 	width: 100%;
 	position: relative;
 }
@@ -103,10 +99,10 @@ h2::after {
 	right: 0;
 }
 .carousel .item h4 {
-	font-size: 18px;
+	font-size: 1.8rem;
 }
 .carousel .item h4, .carousel .item p, .carousel .item ul {
-	margin-bottom: 5px;
+	margin-bottom: .5rem;
 }
 
 .carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {
@@ -115,24 +111,24 @@ h2::after {
 	box-shadow: none;
 }
 .carousel .thumb-content .btn i {
-	font-size: 14px;
+	font-size: 1.4rem;
 	font-weight: bold;
-	margin-left: 5px;
+	margin-left: .5rem;
 }
 .carousel .item-price {
-	font-size: 13px;
-	padding: 2px 0;
+	font-size: 1.3rem;
+	padding: .2rem 0;
 }
 .carousel .item-price strike {
 	opacity: 0.7;
-	margin-right: 5px;
+	margin-right: .5rem;
 }
 .carousel-control-prev, .carousel-control-next {
-	height: 44px;
-	width: 40px;
+	height: 4.4rem;
+	width: 4.0rem;
 	background: #dc3545;	
 	margin: auto 0;
-	border-radius: 4px;
+	border-radius: .4rem;
 	opacity: 0.8;
 }
 .carousel-control-prev:hover, .carousel-control-next:hover {
@@ -140,11 +136,11 @@ h2::after {
 	opacity: 1;
 }
 .carousel-control-prev i, .carousel-control-next i {
-	font-size: 36px;
+	font-size: 3.6rem;
 	position: absolute;
 	top: 50%;
 	display: inline-block;
-	margin: -19px 0 0 0;
+	margin: -1.9rem 0 0 0;
 	z-index: 5;
 	left: 0;
 	right: 0;
@@ -153,18 +149,18 @@ h2::after {
 	font-weight: bold;
 }
 .carousel-control-prev i {
-	margin-left: -2px;
+	margin-left: -.2rem;
 }
 .carousel-control-next i {
-	margin-right: -4px;
+	margin-right: -.4rem;
 }		
 .carousel-indicators {
-	bottom: -50px;
+	bottom: -5.0rem;
 }
 .carousel-indicators li, .carousel-indicators li.active {
-	width: 10px;
-	height: 10px;
-	margin: 4px;
+	width: 1.0rem;
+	height: 1.0rem;
+	margin: .4rem;
 	border-radius: 50%;
 	border: none;
 }
@@ -176,11 +172,11 @@ h2::after {
 }
 .wish-icon {
 	position: absolute;
-	right: 10px;
-	top: 10px;
+	right: 1.0rem;
+	top: 1.0rem;
 	z-index: 99;
 	cursor: pointer;
-	font-size: 16px;
+	font-size: 1.6rem;
 	color: #abb0b8;
 }
 .wish-icon .fa-heart {
@@ -190,7 +186,7 @@ h2::after {
 	padding: 0;
 }
 .star-rating i {
-	font-size: 14px;
+	font-size: 1.4rem;
 	color: #ffc000;
 }
 
