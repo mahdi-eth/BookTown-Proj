@@ -32,8 +32,8 @@
 }
 .wish-icon {
 	position: absolute;
-	right: 1.0rem;
-	top: 1.0rem;
+	right: .2rem;
+	top: .6rem;
 	z-index: 99;
 	cursor: pointer;
 	font-size: 1.6rem;
