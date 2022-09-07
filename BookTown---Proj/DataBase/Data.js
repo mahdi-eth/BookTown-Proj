@@ -7,6 +7,7 @@ function books() {
       price: "$11.26",
       date: 1,
       deal: false,
+      categorie: ["novel", "philosophy"],
 
       rating: 3.5,
       stars: `<div class="ratings">
@@ -24,6 +25,7 @@ function books() {
       price: "$12.99",
       date: 2,
       deal: false,
+      categorie: ["novel"],
 
       rating: 4,
       stars: `<div class="ratings">
@@ -41,6 +43,7 @@ function books() {
       price: "$10.26",
       date: 3,
       deal: false,
+      categorie: ["novel"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -58,6 +61,7 @@ function books() {
       price: "$10.40",
       date: 4,
       deal: false,
+      categorie: ["novel"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -75,6 +79,7 @@ function books() {
       price: "$20.87",
       date: 5,
       deal: false,
+      categorie: ["novel"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -92,6 +97,7 @@ function books() {
       price: "$9.57",
       date: 6,
       deal: false,
+      categorie: ["novel", "philosophy"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -109,6 +115,7 @@ function books() {
       price: "$18.70",
       date: 7,
       deal: false,
+      categorie: ["novel"],
 
       rating: 5,
       stars: `<div class="ratings">
@@ -126,6 +133,7 @@ function books() {
       price: "$9.98",
       date: 8,
       deal: false,
+      categorie: ["novel"],
 
       rating: 5,
       stars: `<div class="ratings">
@@ -143,6 +151,7 @@ function books() {
       price: "$11.98",
       date: 9,
       deal: false,
+      categorie: ["self-dev"],
 
       rating: 5,
       stars: `<div class="ratings">
@@ -160,6 +169,7 @@ function books() {
       price: "$21.12",
       date: 10,
       deal: false,
+      categorie: ["novel"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -177,6 +187,7 @@ function books() {
       price: "$11.44",
       date: 11,
       deal: false,
+      categorie: ["novel"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -194,6 +205,7 @@ function books() {
       price: "$11.40",
       date: 12,
       deal: false,
+      categorie: ["novel"],
 
       rating: 5,
       stars: `<div class="ratings">
@@ -211,6 +223,7 @@ function books() {
       price: "$4.30",
       date: 13,
       deal: false,
+      categorie: ["novel"],
 
       rating: 5,
       stars: `<div class="ratings">
@@ -228,6 +241,7 @@ function books() {
       price: "$24.99",
       date: 14,
       deal: false,
+      categorie: ["novel"],
 
       rating: 3.5,
       stars: `<div class="ratings">
@@ -245,6 +259,7 @@ function books() {
       price: "$18.29",
       date: 15,
       deal: false,
+      categorie: ["novel"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -262,6 +277,7 @@ function books() {
       price: "$11.60",
       date: 16,
       deal: false,
+      categorie: ["self-dev", "philosophy"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -279,6 +295,7 @@ function books() {
       price: "$7.74",
       date: 17,
       deal: false,
+      categorie: ["novel"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -296,6 +313,7 @@ function books() {
       price: "$18.51",
       date: 18,
       deal: false,
+      categorie: ["novel"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -313,6 +331,7 @@ function books() {
       price: "$4.31",
       date: 19,
       deal: false,
+      categorie: ["novel"],
 
       rating: 5,
       stars: `<div class="ratings">
@@ -330,6 +349,7 @@ function books() {
       price: "$14.11",
       date: 20,
       deal: false,
+      categorie: ["novel"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -347,6 +367,7 @@ function books() {
       price: "$4.55",
       date: 21,
       deal: false,
+      categorie: ["novel"],
 
       rating: 5,
       stars: `<div class="ratings">
@@ -364,6 +385,7 @@ function books() {
       price: "$6.32",
       date: 22,
       deal: false,
+      categorie: ["novel"],
 
       rating: 5,
       stars: `<div class="ratings">
@@ -381,6 +403,7 @@ function books() {
       price: "$11.43",
       date: 23,
       deal: false,
+      categorie: ["novel"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -398,6 +421,7 @@ function books() {
       price: "$11.91",
       date: 24,
       deal: false,
+      categorie: ["novel"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -415,6 +439,7 @@ function books() {
       price: "$24.99",
       date: 25,
       deal: false,
+      categorie: ["self-dev"],
 
       rating: 5,
       stars: `<div class="ratings">
@@ -432,6 +457,7 @@ function books() {
       price: "$22.75",
       date: 26,
       deal: false,
+      categorie: ["self-dev", "philosophy"],
 
       rating: 5,
       stars: `<div class="ratings">
@@ -449,6 +475,7 @@ function books() {
       price: "$17.99",
       date: 27,
       deal: false,
+      categorie: ["self-dev"],
 
       rating: 5,
       stars: `<div class="ratings">
@@ -466,6 +493,7 @@ function books() {
       price: "5.37",
       date: 28,
       deal: false,
+      categorie: ["novel"],
 
       rating: 5,
       stars: `<div class="ratings">
@@ -483,6 +511,7 @@ function books() {
       price: "$17.38",
       date: 29,
       deal: false,
+      categorie: ["self-devl"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -500,6 +529,7 @@ function books() {
       price: "$13.09",
       date: 30,
       deal: false,
+      categorie: ["novel"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -518,6 +548,7 @@ function books() {
       date: 31,
       deal: true,
       lastPrice: "$16.99",
+      categorie: ["novel", "philosophy"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -536,6 +567,7 @@ function books() {
       date: 32,
       deal: true,
       lastPrice: "$18.09",
+      categorie: ["self-dev", "philosophy"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -554,6 +586,7 @@ function books() {
       date: 33,
       deal: true,
       lastPrice: "$18.49",
+      categorie: ["self-dev"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -572,6 +605,7 @@ function books() {
       date: 34,
       deal: true,
       lastPrice: "$48.16",
+      categorie: ["novel"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -590,6 +624,7 @@ function books() {
       date: 35,
       deal: true,
       lastPrice: "$34.40",
+      categorie: ["novel"],
 
       rating: 3.5,
       stars: `<div class="ratings">
@@ -608,6 +643,7 @@ function books() {
       date: 36,
       deal: true,
       lastPrice: "$19.61",
+      categorie: ["novel"],
 
       rating: 5,
       stars: `<div class="ratings">
@@ -626,6 +662,7 @@ function books() {
       date: 37,
       deal: true,
       lastPrice: "$17.00",
+      categorie: ["self-dev", "philosophy"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -644,6 +681,7 @@ function books() {
       date: 38,
       deal: true,
       lastPrice: "$13.01",
+      categorie: ["novel"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -662,6 +700,7 @@ function books() {
       date: 39,
       deal: true,
       lastPrice: "$14.99",
+      categorie: ["self-dev"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -680,6 +719,7 @@ function books() {
       date: 40,
       deal: true,
       lastPrice: "$14.99",
+      categorie: ["novel"],
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -698,6 +738,7 @@ function books() {
       date: 41,
       deal: true,
       lastPrice: "$9.49",
+      categorie: ["novel"],
 
       rating: 4,
       stars: `<div class="ratings">
@@ -716,6 +757,7 @@ function books() {
       date: 42,
       deal: true,
       lastPrice: "$14.99",
+      categorie: ["novel"],
 
       rating: 4,
       stars: `<div class="ratings">
