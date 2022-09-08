@@ -17,7 +17,6 @@
 	border-radius: .6rem;
 	text-align: center;
 	position: relative;
-	box-shadow: 0 .2rem .3rem rgba(0,0,0,0.2);
 }
 .thumb-wrapper h4 {
 	font-size: 1.8rem;
@@ -52,4 +51,9 @@
 
 .cardborder .wish-icon {
 	right: -.7rem;
+}
+
+.thumb-wrapper {
+	max-width: 22.6rem;
+	min-height: 40.1rem;
 }
