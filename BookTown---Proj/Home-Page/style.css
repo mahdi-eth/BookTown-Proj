@@ -170,26 +170,10 @@ h2::after {
 .carousel-indicators li.active {	
 	background: rgba(0, 0, 0, 0.6);
 }
-.wish-icon {
-	position: absolute;
-	right: 1.0rem;
-	top: 1.0rem;
-	z-index: 99;
-	cursor: pointer;
-	font-size: 1.6rem;
-	color: #abb0b8;
-}
-.wish-icon .fa-heart {
-	color: #ff6161;
-}
 .star-rating li {
 	padding: 0;
 }
 .star-rating i {
 	font-size: 1.4rem;
 	color: #ffc000;
-}
-
-.cardborder .wish-icon {
-	right: -.7rem;
 }

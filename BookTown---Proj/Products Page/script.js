@@ -67,7 +67,7 @@ dropdownItems.forEach((el) => {
       const rating = books().sort(function (a, b) {
         let rateA = a.rating,
           rateB = b.rating;
-        return rateA - rateB;
+        return rateB - rateA;
       });
       productMaker(rating);
     }
@@ -98,7 +98,7 @@ categorieSelector.forEach((el) => {
 		const rating = books().sort(function (a, b) {
 			let rateA = a.rating,
 			  rateB = b.rating;
-			return rateA - rateB;
+			return rateB - rateA;
 		  });
 		  productMaker(rating);
 	  }
