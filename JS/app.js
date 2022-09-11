@@ -1,13 +1,11 @@
-import books from "../DataBase/Data.js";
+
 
 // send data to cart section
 
 let dataState = JSON.parse(localStorage.getItem("data")) || [];
-let stateForAlert = false;
 
 if (localStorage.getItem("data") == null){
   dataState = [];
-  stateForAlert = false;
 }
 
 window.addEventListener("click", (el) => {
@@ -38,14 +36,6 @@ window.addEventListener("click", (el) => {
 // added to cart , alert section
 
 window.addEventListener("click", (el) => {
-  if (stateForAlert == true && el.target.innerText == "Add to Cart "){
-    console.log("object");
-    alert(`${el.target.parentElement.children[0].innerText} is Already in the cart!`);
-    stateForAlert = true;
-  } 
-  if (stateForAlert == false && el.target.innerText == "Add to Cart ") {
+  if (el.target.innerText == "Add to Cart "){}
     alert(`${el.target.parentElement.children[0].innerText} Added to cart!`);
-    stateForAlert = true;
-  }
 });
-
