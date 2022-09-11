@@ -28,105 +28,8 @@
                     <th scope="col">Price</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">
-                      <div class="d-flex align-items-center">
-                        <img
-                          src="../IMG/books/41cYPOCBUKL._AC_SX184_.jpg"
-                          class="img-fluid rounded-3"
-                          style="width: 120px"
-                          alt="Book"
-                        />
-                        <div class="flex-column ms-4">
-                          <p class="mb-2">Thinking, Fast and Slow</p>
-                        </div>
-                      </div>
-                    </th>
-                    <td class="align-middle">
-                      <p class="mb-0" style="font-weight: 500">Paperback</p>
-                    </td>
-                    <td class="align-middle">
-                      <div class="d-flex flex-row">
-                        <button
-                          class="btn btn-link px-2"
-                          onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                        >
-                          <i class="fas fa-minus"></i>
-                        </button>
-
-                        <input
-                          id="form1"
-                          min="0"
-                          name="quantity"
-                          value="2"
-                          type="number"
-                          class="form-control form-control-sm"
-                          style="width: 50px"
-                        />
-
-                        <button
-                          class="btn btn-link px-2"
-                          onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                        >
-                          <i class="fas fa-plus"></i>
-                        </button>
-                      </div>
-                    </td>
-                    <td class="align-middle">
-                      <p class="mb-0" style="font-weight: 500">$9.99</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="border-bottom-0">
-                      <div class="d-flex align-items-center">
-                        <img
-                          src="../IMG/books/41DonhMjyAL._AC_SX184_.jpg"
-                          class="img-fluid rounded-3"
-                          style="width: 120px"
-                          alt="Book"
-                        />
-                        <div class="flex-column ms-4">
-                          <p class="mb-2">
-                            Homo Deus: A Brief History of Tomorrow
-                          </p>
-                        </div>
-                      </div>
-                    </th>
-                    <td class="align-middle border-bottom-0">
-                      <p class="mb-0" style="font-weight: 500">Paperback</p>
-                    </td>
-                    <td class="align-middle border-bottom-0">
-                      <div class="d-flex flex-row">
-                        <button
-                          class="btn btn-link px-2"
-                          onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                        >
-                          <i class="fas fa-minus"></i>
-                        </button>
-
-                        <input
-                          id="form1"
-                          min="0"
-                          name="quantity"
-                          value="1"
-                          type="number"
-                          class="form-control form-control-sm"
-                          style="width: 50px"
-                        />
-
-                        <button
-                          class="btn btn-link px-2"
-                          onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                        >
-                          <i class="fas fa-plus"></i>
-                        </button>
-                      </div>
-                    </td>
-                    <td class="align-middle border-bottom-0">
-                      <p class="mb-0" style="font-weight: 500">$13.50</p>
-                    </td>
-                  </tr>
+                <tbody id="productItemsList">
+                  <span>cdsdc</span>
                 </tbody>
               </table>
             </div>
@@ -145,6 +48,7 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="../JS/app.js"></script>
     <script type="module" src="./script.js"></script>
   </body>
 </html>
