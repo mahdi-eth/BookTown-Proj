@@ -1,24 +1,18 @@
 const productItemsList = document.getElementById("productItemsList");
+const parsedData = JSON.parse(localStorage.getItem("data"));
 
-
-console.log(localStorage.getItem("cart"));
-
-
-const array = JSON.parse(localStorage.getItem("cart"));
-console.log(array);
-
-array.forEach((product) => {
+parsedData.forEach((product) => {
         const cartCard = `<tr>
         <th scope="row">
           <div class="d-flex align-items-center">
             <img
-              src="../IMG/books/41cYPOCBUKL._AC_SX184_.jpg"
+              src="${product.cover}"
               class="img-fluid rounded-3"
               style="width: 120px"
               alt="Book"
             />
             <div class="flex-column ms-4">
-              <p class="mb-2">Thinking, Fast and Slow</p>
+              <p class="mb-2">${product.name}</p>
             </div>
           </div>
         </th>
@@ -53,7 +47,7 @@ array.forEach((product) => {
           </div>
         </td>
         <td class="align-middle">
-          <p class="mb-0" style="font-weight: 500">$9.99</p>
+          <p class="mb-0" style="font-weight: 500">${product.price}<strike class="ms-3">${product.lastprice || ""}</strike></p>
         </td>
         </tr> `
         productItemsList.innerHTML += cartCard;

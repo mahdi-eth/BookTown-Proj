@@ -1,8 +1,40 @@
-let listOfProducts = [];
+import books from "../DataBase/Data.js";
+
+// send data to cart section
+
+let dataState = JSON.parse(localStorage.getItem("data")) || [];
 
 window.addEventListener("click", (el) => {
   if (el.target.innerText == "Add to Cart ") {
-    listOfProducts.push(el.target.parentElement.parentElement.innerHTML);
-    localStorage.setItem("cart", JSON.stringify(listOfProducts));
+    let data = {
+      cover: el.target.parentElement.parentElement.children[0].children[0].src,
+      name: el.target.parentElement.parentElement.children[1].children[0]
+        .innerText,
+      price:
+        el.target.parentElement.parentElement.children[1].children[2]
+          .children[1].innerText,
+      lastprice: (() => {
+        if (
+          el.target.parentElement.parentElement.children[1].children[2]
+            .children[0].innerText
+        ) {
+          return el.target.parentElement.parentElement.children[1].children[2]
+            .children[0].innerText;
+        }
+      })(),
+    };
+    dataState.push(data);
+    localStorage.setItem("data", JSON.stringify(dataState));
+  }
+});
+
+// added to cart alert section
+
+window.addEventListener("click", (el) => {
+  if (el.target.innerText == "Add to Cart ") {
+    el.target.innerText = "Added to cart!";
+    el.target.className = "btn btn-outline-danger";
+  } else if (el.target.innerText == "Added to cart!"){
+    alert("Already added to cart!");
   }
 });
