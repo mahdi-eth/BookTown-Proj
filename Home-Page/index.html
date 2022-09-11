@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=chrome,edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./style.css" />
+
+  <title>BookTown HomePage</title>
+</head>
+<body>
+  <header class="main-header">
+    <section
+      class="row-1 d-flex  flex-wrap-reverse flex-sm-nowrap justify-content-between align-content-center align-items-center py-4">
+      <a class="d-none d-md-block ms-5" href="./index.html">
+        <img class="logo-name w-50 img-fluid" src="../IMG/deafults/logo-name.svg" alt="logo and name of website" />
+      </a>
+      <a class="d-none d-sm-block d-md-none me-4 pb-1" href="./index.html">
+        <i role="button" class="bi bi-house-door-fill text-danger fs-32 ps-2">
+        </i>
+      </a>
+      <nav class="navbar flex-grow-1 align-self-center me-sm-5 pe-lg-5">
+        <div class="container-fluid me-sm-5 pe-sm-5">
+          <form class="d-flex me-sm-5 pe-sm-5 w-100" role="search">
+            <input class="form-control me-sm-2 h-100 w-100 border-danger border-opacity-25" type="search"
+              placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-danger" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+      <div class="personal-profile d-flex gap-3 align-items-center justify-content-center me-5">
+        <a href="./index.html">
+          <i role="button" class="bi bi-house-door-fill text-danger fs-32 ps-2 d-block d-sm-none">
+          </i>
+        </a>
+
+        <a class="link" href="../Cart/index.html" target="_blank" rel="noopener noreferrer">
+          <button type="button" class="btn btn-outline-danger">
+            <svg class="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-bag-fill" viewBox="0 0 16 16">
+              <path
+                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z">
+              </path>
+            </svg>
+            Purchase
+          </button>
+        </a>
+        <a class="link" href="../SignUpModal/index.html" target="_blank" rel="noopener noreferrer">
+          <button type="button" class="btn btn-outline-danger">
+            <svg class="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-person-fill" viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+            </svg>
+            Profile
+          </button>
+        </a>
+        <i role="button" class="bi bi-list fs-32 ps-2 d-block d-sm-none"></i>
+      </div>
+      </div>
+      </div>
+    </section>
+    <section class="row-2 py-5 d-none d-sm-block">
+      <div class="header-img p-5">
+        <div class="in-img-text bg-dark bg-opacity-25 my-5 p-5 d-flex flex-column justify-content-center gap-4">
+          <h1 class="fs-46 align-self-center">welcome to the town of books</h1>
+          <h3 class="fs-24 d-none d-md-block align-self-center ps-md-5 ms-md-5">easily find and purchase your favorite
+            books.</h3>
+        </div>
+      </div>
+    </section>
+    <section class="row-3">
+      <ul class="nav-bar list-unstyled d-none d-sm-flex">
+        <li class="categorie flex-grow-1 fs-24 text-center">
+          <a class="w-100 h-100 d-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10"
+            href="../ProductsPage/LinkedHTMLs/self-dev-index.html" target="_blank" rel="noopener noreferrer">Self-Development</a>
+        </li>
+        <li class="categorie flex-grow-1 fs-24 text-center">
+          <a class="w-100 h-100 d-inline-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10"
+            href="../ProductsPage/LinkedHTMLs/philosophy-index.html" target="_blank" rel="noopener noreferrer">Philosophy</a>
+        </li>
+        <li class="categorie flex-grow-1 fs-24 text-center">
+          <a class="w-100 h-100 d-inline-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10"
+            href="../ProductsPage/LinkedHTMLs/novels-index.html" target="_blank" rel="noopener noreferrer">Novels</a>
+        </li>
+        <li class="categorie flex-grow-1 fs-24 text-center">
+          <a class="w-100 h-100 d-inline-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10"
+            href="../ProductsPage/MainPage/index.html" target="_blank" rel="noopener noreferrer">Newest Books</a>
+        </li>
+        <li class="categorie flex-grow-1 fs-24 text-center">
+          <a class="w-100 h-100 d-block spinner-border-sm bg-danger text-light border border-1 border-warning border-opacity-10"
+            href="../ProductsPage/LinkedHTMLs/best.html" target="_blank" rel="noopener noreferrer">Best Of BookTown</a>
+        </li>
+      </ul>
+    </section>
+  </header>
+
+  <main class="main-body container mt-5 d-flex flex-column gap-5">
+
+    <section class="upper-main-body d-flex flex-column flex-xl-row gap-5 justify-content-start w-100">
+      <div id="carouselExampleSlidesOnly" class="carousel slide d-none d-md-block" data-bs-ride="carousel"
+        data-interval="2000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://wallpaperaccess.com/full/2878928.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="Picture of a boy rading a book">
+          </div>
+          <div class="carousel-item">
+            <img src="	https://wallpaperaccess.com/full/1771687.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="Picture of a boy rading a book">
+          </div>
+          <div class="carousel-item">
+            <img src="	https://wallpaperaccess.com/full/1692872.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="Picture of a boy rading a book">
+          </div>
+          <h3 class="d-block fs-38 position-absolute bottom-0 w-100 text-center py-5 mb-0 text-light bg-dark bg-opacity-50 rounded-4">Find any books you need!</h3>
+        </div>
+      </div>
+      <div
+        class="newest-book d-none d-xl-flex gap-5 align-items-center justify-content-center border border-2 border-danger rounded-4 border-opacity-50 p-3">
+        <div class="card d-flex flex-column align-items-center ms-4" style="width: 18rem;border: none;">
+          <img src="../IMG/deafults/best.png" class="card-img-top" alt="image of a book">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title fs-24">Newest Book</h5>
+          </div>
+        </div>
+        <div
+          class="cardborder d-flex flex-column align-items-center border-start border-2 border-danger border-opacity-25 p-4 position-relative"
+          style="width: 18rem;">
+          <div class="img-box">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/61tqfa+xbWL._AC_UL226_SR226,226_.jpg" class="img-fluid" alt="book pic">
+          </div>
+          <div class="card-body d-flex flex-column align-items-center gap-1 mt-3">
+            <h4 class="card-title">Verity</h4>
+            <div class="thumb-content">
+                <div class="ratings text-center">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-half text-warning"></i>
+                  <i class="bi bi-star text-warning"></i>
+              </div>
+              <p class="item-price text-center"><b>$11.26</b></p>
+              <a href="#" class="btn btn-danger  text-light">Add to Cart <i class="bi bi-bag"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row shadow border border-2 border-danger rounded-4 border-opacity-50 p-3 d-xl-none">
+        <div class="col-md-12">
+          <h2>Newest <b>books</b></h2>
+          <div id="myCarousel2" class="carousel slide carousel-dark" data-bs-ride="carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item carousel-item active">
+                <div id="newBooksCarouselItem1" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="newBooksCarouselItem2" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="newBooksCarouselItem3" class="row">
+                  <div class="col-sm-3">
+                  </div>
+                  <div class="col-sm-3">
+                  </div>
+                  <div class="col-sm-3">
+                  </div>
+                  <div class="col-sm-3">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel2" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel2" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="best-of-booktown shadow-sm">
+      <div class="row shadow border border-2 border-danger rounded-4 border-opacity-50 p-3">
+        <div class="col-md-12">
+            <h2>best of <b>BookTown</b></h2>
+          <div id="myCarousel1" class="carousel slide carousel-dark" data-bs-ride="carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item carousel-item active">
+                <div id="bestBooksCarouselItem1" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestBooksCarouselItem2" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestBooksCarouselItem3" class="row">
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel1" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel1" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="best-deals">
+      <div class="row shadow border border-2 border-danger rounded-4 border-opacity-50 p-3">
+        <div class="col-md-12">
+          <h2>Best <b>Deals</b></h2>
+          <div id="myCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item carousel-item active">
+                <div id="bestDealsCarouselItem1" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestDealsCarouselItem2" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestDealsCarouselItem3" class="row">
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="philosophy-img-pop-up">
+      <a href="../ProductsPage/LinkedHTMLs/philosophy-index.html" target="_blank"><div id="carouselExampleSlidesOnly" class="carousel slide d-none d-md-block" data-bs-ride="carousel"
+        data-interval="2000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../IMG/deafults/nietche.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="fredrich nietzche">
+          </div>
+          <div class="carousel-item">
+            <img src="../IMG/deafults/wallpaperflare.com_wallpaper.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="greek philosiphers">
+          </div>
+          <div class="carousel-item">
+            <img src="../IMG/deafults/philo.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="Philosophy">
+            </div>
+            <h4 class="d-block fs-48 position-absolute bottom-0 w-100 text-center py-5 mb-0 text-light bg-dark bg-opacity-50 rounded-4">Read Philosophy books here.</h4>
+          </div>
+      </div></a>
+    </section>
+    <section class="Philosophy">
+      <div class="row shadow border border-2 border-danger rounded-4 border-opacity-50 p-3">
+        <div class="col-md-12">
+          <h2>best of <b>Philosophy</b></h2>
+          <div id="myCarousel4" class="carousel slide carousel-dark" data-bs-ride="carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item carousel-item active">
+                <div id="bestOfPhilosophyCarouselItem1" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestOfPhilosophyCarouselItem2" class="row d-flex justify-content-evenly">
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel4" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel4" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="Self-Development">
+      <div class="row shadow border border-2 border-danger rounded-4 border-opacity-50 p-3">
+        <div class="col-md-12">
+          <h2>Best of <b>self-development</b></h2>
+          <div id="myCarousel5" class="carousel slide carousel-dark" data-bs-ride="carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item carousel-item active">
+                <div id="bestSelfDevCarouselItem1" class="row d-flex justify-content-evenly">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestSelfDevCarouselItem2" class="row d-flex justify-content-evenly">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestSelfDevCarouselItem3" class="row d-flex justify-content-evenly">
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel5" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel5" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="novels-img-pop-up">
+      <a href="../ProductsPage/LinkedHTMLs/novels-index.html" target="_blank"><div id="carouselExampleSlidesOnly" class="carousel slide d-none d-md-block" data-bs-ride="carousel"
+        data-interval="2000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../IMG/deafults/books.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="novels">
+          </div>
+          <div class="carousel-item">
+            <img src="../IMG/deafults/novels.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="novels">
+          </div>
+          <div class="carousel-item">
+            <img src="../IMG/deafults/comics.jpg" class="d-block w-100 h-100 rounded-4"
+              alt="novels">
+            </div>
+            <h4 class="d-block fs-48 position-absolute bottom-0 w-100 text-center py-5 mb-0 text-light bg-dark bg-opacity-50 rounded-4">Read the best novels here.</h4>
+          </div>
+      </div></a>
+    </section>
+    <section class="novels text-center">
+      <div class="row shadow border border-2 border-danger rounded-4 border-opacity-50 p-3">
+        <div class="col-md-12">
+          <h2>Best of <b>novels</b></h2>
+          <div id="myCarousel6" class="carousel slide carousel-dark" data-bs-ride="carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item carousel-item active">
+                <div id="bestNovelsCarouselItem1" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestNovelsCarouselItem2" class="row">
+                </div>
+              </div>
+              <div class="item carousel-item">
+                <div id="bestNovelsCarouselItem3" class="row">
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel6" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel6" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="../ProductsPage/MainPage/index.html" target="_blank">
+        <button class="btn btn-danger fs-28 mt-5 rounded p-3">See all the books <i class="bi bi-arrow-right"></i></button>
+      </a>
+
+    </section>
+  </main>
+
+  <footer class="bg-light text-center text-white mt-5">
+    <div class="container p-4 pb-0 border-top border-1 border-danger border-opacity-25">
+      <section class="mb-4">
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #55acee;"
+          href="https://twitter.com/ettehadnejad"
+          role="button"
+          ><i class="bi bi-twitter"></i
+        ></a>
+  
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #dd4b39;"
+          href="https://mail.google.com/mail/u/0/?hl=fr#search/mahdi.ettehad85%40gmail.com"
+          role="button"
+          ><i class="bi bi-google"></i
+        ></a>
+  
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #ac2bac;"
+          href="https://www.instagram.com/mahdi__ettehad/"
+          role="button"
+          ><i class="bi bi-instagram"></i
+        ></a>
+  
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #0082ca;"
+          href="https://www.linkedin.com/in/mahdi-ettehadnejad-86a0b323a/"
+          role="button"
+          ><i class="bi bi-linkedin"></i
+        ></a>
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #333333;"
+          href="https://github.com/mahdi-Eth"
+          role="button"
+          ><i class="bi bi-github"></i
+        ></a>
+      </section>
+    </div>
+    <div class="text-center p-3 fs-18" style="background-color: rgba(0, 0, 0, 0.2);">
+      Creator :
+      <a class="text-white" href="https://github.com/mahdi-Eth">Mahdi Ettehadnejad</a>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+    <script src="../JS/app.js"></script>
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>
