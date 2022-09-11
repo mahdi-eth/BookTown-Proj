@@ -8,6 +8,7 @@ export default function books() {
       date: 1,
       deal: false,
       categorie: ["novel", "philosophy"],
+      gone:false,
 
       rating: 3.5,
       stars: `<div class="ratings">
@@ -26,6 +27,7 @@ export default function books() {
       date: 2,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 4,
       stars: `<div class="ratings">
@@ -44,6 +46,7 @@ export default function books() {
       date: 3,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -62,6 +65,7 @@ export default function books() {
       date: 4,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -80,6 +84,7 @@ export default function books() {
       date: 5,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -98,6 +103,7 @@ export default function books() {
       date: 6,
       deal: false,
       categorie: ["novel", "philosophy"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -116,6 +122,7 @@ export default function books() {
       date: 7,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 5,
       stars: `<div class="ratings">
@@ -134,6 +141,7 @@ export default function books() {
       date: 8,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 5,
       stars: `<div class="ratings">
@@ -152,6 +160,7 @@ export default function books() {
       date: 9,
       deal: false,
       categorie: ["self-dev"],
+      gone:false,
 
       rating: 5,
       stars: `<div class="ratings">
@@ -170,6 +179,7 @@ export default function books() {
       date: 10,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -188,6 +198,7 @@ export default function books() {
       date: 11,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -206,6 +217,7 @@ export default function books() {
       date: 12,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 5,
       stars: `<div class="ratings">
@@ -224,6 +236,7 @@ export default function books() {
       date: 13,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 5,
       stars: `<div class="ratings">
@@ -242,6 +255,7 @@ export default function books() {
       date: 14,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 3.5,
       stars: `<div class="ratings">
@@ -260,6 +274,7 @@ export default function books() {
       date: 15,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -278,6 +293,7 @@ export default function books() {
       date: 16,
       deal: false,
       categorie: ["self-dev", "philosophy"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -296,6 +312,7 @@ export default function books() {
       date: 17,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -314,6 +331,7 @@ export default function books() {
       date: 18,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -332,6 +350,7 @@ export default function books() {
       date: 19,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 5,
       stars: `<div class="ratings">
@@ -350,6 +369,7 @@ export default function books() {
       date: 20,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -368,6 +388,7 @@ export default function books() {
       date: 21,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 5,
       stars: `<div class="ratings">
@@ -386,6 +407,7 @@ export default function books() {
       date: 22,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 5,
       stars: `<div class="ratings">
@@ -404,6 +426,7 @@ export default function books() {
       date: 23,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -422,6 +445,7 @@ export default function books() {
       date: 24,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -440,6 +464,7 @@ export default function books() {
       date: 25,
       deal: false,
       categorie: ["self-dev"],
+      gone:false,
 
       rating: 5,
       stars: `<div class="ratings">
@@ -458,6 +483,7 @@ export default function books() {
       date: 26,
       deal: false,
       categorie: ["self-dev", "philosophy"],
+      gone:false,
 
       rating: 5,
       stars: `<div class="ratings">
@@ -476,6 +502,7 @@ export default function books() {
       date: 27,
       deal: false,
       categorie: ["self-dev"],
+      gone:false,
 
       rating: 5,
       stars: `<div class="ratings">
@@ -494,6 +521,7 @@ export default function books() {
       date: 28,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 5,
       stars: `<div class="ratings">
@@ -512,6 +540,7 @@ export default function books() {
       date: 29,
       deal: false,
       categorie: ["self-devl"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -530,6 +559,7 @@ export default function books() {
       date: 30,
       deal: false,
       categorie: ["novel"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -549,6 +579,7 @@ export default function books() {
       deal: true,
       lastPrice: "$16.99",
       categorie: ["novel", "philosophy"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -568,6 +599,7 @@ export default function books() {
       deal: true,
       lastPrice: "$18.09",
       categorie: ["self-dev", "philosophy"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -587,6 +619,7 @@ export default function books() {
       deal: true,
       lastPrice: "$18.49",
       categorie: ["self-dev"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -606,6 +639,7 @@ export default function books() {
       deal: true,
       lastPrice: "$48.16",
       categorie: ["novel"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -625,6 +659,7 @@ export default function books() {
       deal: true,
       lastPrice: "$34.40",
       categorie: ["novel"],
+      gone:false,
 
       rating: 3.5,
       stars: `<div class="ratings">
@@ -644,6 +679,7 @@ export default function books() {
       deal: true,
       lastPrice: "$19.61",
       categorie: ["novel"],
+      gone:false,
 
       rating: 5,
       stars: `<div class="ratings">
@@ -663,6 +699,7 @@ export default function books() {
       deal: true,
       lastPrice: "$17.00",
       categorie: ["self-dev", "philosophy"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -682,6 +719,7 @@ export default function books() {
       deal: true,
       lastPrice: "$13.01",
       categorie: ["novel"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -701,6 +739,7 @@ export default function books() {
       deal: true,
       lastPrice: "$14.99",
       categorie: ["self-dev"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -720,6 +759,7 @@ export default function books() {
       deal: true,
       lastPrice: "$14.99",
       categorie: ["novel"],
+      gone:false,
 
       rating: 4.5,
       stars: `<div class="ratings">
@@ -739,6 +779,7 @@ export default function books() {
       deal: true,
       lastPrice: "$9.49",
       categorie: ["novel"],
+      gone:false,
 
       rating: 4,
       stars: `<div class="ratings">
@@ -758,6 +799,7 @@ export default function books() {
       deal: true,
       lastPrice: "$14.99",
       categorie: ["novel"],
+      gone:false,
 
       rating: 4,
       stars: `<div class="ratings">

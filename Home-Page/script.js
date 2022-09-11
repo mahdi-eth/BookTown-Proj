@@ -20,7 +20,7 @@ function cartCreator(book) {
         <h4>${book.name}</h4>
             ${book.stars}
         <p class="item-price"><strike>${book.lastPrice || ""}</strike><b>$${book.price}</b></p>
-        <a href="#" class="btn btn-danger  text-light"> Add to Cart <i class="bi bi-bag"></i></a>
+        <button class="btn btn-danger text-light"> Add to Cart <i class="bi bi-bag"></i></button>
       </div>
     </div>`
 }

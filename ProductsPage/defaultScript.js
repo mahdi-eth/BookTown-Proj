@@ -27,7 +27,7 @@ export default function productMaker(bookData) {
 		<p class="item-price"><strike class="">${book.lastPrice || ""}</strike><b>$${
       book.price
     }</b></p>
-		<a href="#" class="btn btn-danger text-light"> Add to Cart <i class="bi bi-bag"></i></a>
+		<button class="btn btn-danger text-light"> Add to Cart <i class="bi bi-bag"></i></button>
 	</div>
 	</div>`;
   });

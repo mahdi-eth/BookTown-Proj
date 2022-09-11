@@ -3,6 +3,12 @@ import books from "../DataBase/Data.js";
 // send data to cart section
 
 let dataState = JSON.parse(localStorage.getItem("data")) || [];
+let stateForAlert = false;
+
+if (localStorage.getItem("data") == null){
+  dataState = [];
+  stateForAlert = false;
+}
 
 window.addEventListener("click", (el) => {
   if (el.target.innerText == "Add to Cart ") {
@@ -28,13 +34,18 @@ window.addEventListener("click", (el) => {
   }
 });
 
-// added to cart alert section
+
+// added to cart , alert section
 
 window.addEventListener("click", (el) => {
-  if (el.target.innerText == "Add to Cart ") {
-    el.target.innerText = "Added to cart!";
-    el.target.className = "btn btn-outline-danger";
-  } else if (el.target.innerText == "Added to cart!"){
-    alert("Already added to cart!");
+  if (stateForAlert == true && el.target.innerText == "Add to Cart "){
+    console.log("object");
+    alert(`${el.target.parentElement.children[0].innerText} is Already in the cart!`);
+    stateForAlert = true;
+  } 
+  if (stateForAlert == false && el.target.innerText == "Add to Cart ") {
+    alert(`${el.target.parentElement.children[0].innerText} Added to cart!`);
+    stateForAlert = true;
   }
 });
+
