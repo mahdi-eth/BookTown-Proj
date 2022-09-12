@@ -42,17 +42,17 @@
                     </i>
                 </a>
 
-                <a class="link" href="../../Cart/index.html" target="_blank" rel="noopener noreferrer">
+                <span onclick="window.open('http://127.0.0.1:5500/Cart/index.html','_self','resizable=yes')">
                     <button type="button" class="btn btn-outline-danger">
-                        <svg class="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-bag-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z">
-                            </path>
-                        </svg>
-                        Purchase
+                      <svg class="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bag-fill" viewBox="0 0 16 16">
+                        <path
+                          d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z">
+                        </path>
+                      </svg>
+                      Purchase
                     </button>
-                </a>
+                  </span>
                 <a class="link" href="../../SignUpModal/index.html" target="_blank" rel="noopener noreferrer">
                     <button type="button" class="btn btn-outline-danger">
                         <svg class="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -140,7 +140,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    <script type="module" src="../../JS/app.js"></script>
+        <script src="../cartHandler.js"></script>
     <script type="module" src="../defaultScript.js"></script>
     <script type="module" src="./script.js"></script>
 </body>

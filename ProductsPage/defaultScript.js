@@ -20,14 +20,14 @@ export default function productMaker(bookData) {
 		<img src="${book.cover}" class="img-fluid" alt="book cover">
 	</div>
 	<div class="thumb-content">
-		<h4>${book.name}</h4>
+		<h4 class="book-name">${book.name}</h4>
 		<div class="star-rating">
 			${book.stars}
 		</div>
 		<p class="item-price"><strike class="">${book.lastPrice || ""}</strike><b>$${
       book.price
     }</b></p>
-		<button class="btn btn-danger text-light"> Add to Cart <i class="bi bi-bag"></i></button>
+		<button class="btn btn-outline-danger"> Add to Cart <i class="bi bi-bag"></i></button>
 	</div>
 	</div>`;
   });

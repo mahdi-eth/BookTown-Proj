@@ -6,7 +6,14 @@ if (localStorage.getItem("data") == null){
   dataState = [];
 }
 
+
+window.addEventListener("mouseenter", () => {
+  location.reload();
+})
+
+
 window.addEventListener("click", (el) => {
+  console.log(el);
   if (el.target.innerText == "Add to Cart ") {
     let data = {
       cover: el.target.parentElement.parentElement.children[0].children[0].src,

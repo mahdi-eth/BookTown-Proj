@@ -1,7 +1,10 @@
 const productItemsList = document.getElementById("productItemsList");
 let parsedData = JSON.parse(localStorage.getItem("data"));
 
-parsedData.forEach((product) => {
+let thisIsValueNumber = JSON.parse(localStorage.getItem("valueNumber")) || [];
+console.log(thisIsValueNumber);
+
+parsedData.forEach((product,number) => {
   const cartCard = `<tr>
         <td scope="row">
           <div class="d-flex align-items-center">
@@ -29,7 +32,7 @@ parsedData.forEach((product) => {
               id="form1"
               min="1"
               name="quantity"
-              value="1"
+              value="${thisIsValueNumber[number] || 1}"
               type="number"
               class="form-control form-control-sm"
               style="width: 50px"
@@ -63,4 +66,14 @@ parsedData.forEach((product) => {
     location.reload();
   })})
 });
+
+setInterval(() => {
+const productCount = document.querySelectorAll("#form1");
+let valueCatcher = [];
+
+productCount.forEach(input => {
+  valueCatcher.push(input.value);
+  localStorage.setItem("valueNumber", JSON.stringify(valueCatcher));
+});
+}, 1000);
 

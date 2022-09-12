@@ -17,10 +17,10 @@ function cartCreator(book) {
         <img src="${book.cover}" class="img-fluid" alt="book img">
       </div>
       <div class="thumb-content">
-        <h4>${book.name}</h4>
+        <h4 class="book-name">${book.name}</h4>
             ${book.stars}
         <p class="item-price"><strike>${book.lastPrice || ""}</strike><b>$${book.price}</b></p>
-        <button class="btn btn-danger text-light"> Add to Cart <i class="bi bi-bag"></i></button>
+        <button class="btn btn-outline-danger"> Add to Cart <i class="bi bi-bag"></i></button>
       </div>
     </div>`
 }

@@ -177,3 +177,7 @@ h2::after {
 	font-size: 1.4rem;
 	color: #ffc000;
 }
+
+.book-name {
+	min-height: 4.5rem;
+}
