@@ -1,5 +1,3 @@
-
-
 // send data to cart section
 
 let dataState = JSON.parse(localStorage.getItem("data")) || [];
@@ -7,6 +5,8 @@ let dataState = JSON.parse(localStorage.getItem("data")) || [];
 if (localStorage.getItem("data") == null){
   dataState = [];
 }
+
+
 
 window.addEventListener("click", (el) => {
   if (el.target.innerText == "Add to Cart ") {
@@ -29,6 +29,7 @@ window.addEventListener("click", (el) => {
     };
     dataState.push(data);
     localStorage.setItem("data", JSON.stringify(dataState));
+    location.reload();
   }
 });
 
@@ -36,6 +37,6 @@ window.addEventListener("click", (el) => {
 // added to cart , alert section
 
 window.addEventListener("click", (el) => {
-  if (el.target.innerText == "Add to Cart "){}
+  if (el.target.innerText == "Add to Cart "){
     alert(`${el.target.parentElement.children[0].innerText} Added to cart!`);
-});
+}});
