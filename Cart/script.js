@@ -63,3 +63,4 @@ parsedData.forEach((product) => {
     location.reload();
   })})
 });
+
