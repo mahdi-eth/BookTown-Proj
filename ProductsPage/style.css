@@ -2,47 +2,54 @@
 @import url(../CSS/reset.css);
 @import url(../Home-Page/style.css);
 
-
 .main-header {
-    height: 11rem;
+  height: 11rem;
 }
-
 .main-body {
-    margin-top: 12.9rem;
+  margin-top: 12.9rem;
 }
-
 .thumb-wrapper {
-	padding: 2.5rem 1.5rem;
-	background: #fff;
-	border-radius: .6rem;
-	text-align: center;
-	position: relative;
+  padding: 2.5rem 1.5rem;
+  background: #fff;
+  border-radius: 0.6rem;
+  text-align: center;
+  position: relative;
 }
 .thumb-wrapper h4 {
-	font-size: 1.8rem;
+  font-size: 1.8rem;
 }
-.thumb-wrapper h4, .thumb-wrapper .item p, .thumb-wrapper .item ul {
-	margin-bottom: .5rem;
-	margin-top: 1.0rem;
+.thumb-wrapper h4,
+.thumb-wrapper .item p,
+.thumb-wrapper .item ul {
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
 }
-.thumb-content .btn:hover, .thumb-content .btn:focus {
-	color: #fff;
-	background: #dc3546e2;
+.thumb-content .btn:hover,
+.thumb-content .btn:focus {
+  color: #fff;
+  background: #dc3546e2;
 }
 
 .star-rating li {
-	padding: 0;
+  padding: 0;
 }
 .star-rating i {
-	font-size: 1.4rem;
-	color: #ffc000;
+  font-size: 1.4rem;
+  color: #ffc000;
 }
 
 .thumb-wrapper {
-	max-width: 22.6rem;
-	min-height: 40.1rem;
+  max-width: 22.6rem;
+  min-height: 40.1rem;
 }
 
 .book-name {
-	min-height: 4.3rem;
+  min-height: 4.3rem;
+}
+
+
+.second-navbar-bi-list-clicked {
+	z-index: 1;
+	transition: all ease .5s;
+	top: -40rem;
 }

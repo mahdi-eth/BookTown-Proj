@@ -48,13 +48,24 @@ parsedData.forEach((product, number) => {
         <strike class="text-secondary">${product.lastprice || ""}</strike>
         <p class="mb-0" style="font-weight: 500">$${product.price}</p>
           </td>
-          <td id="myTd" class="align-middle d-none">
+          <td id="myTd" class="align-middle">
           <button id="deleterBtn" type="button" class="btn ms-4 mt-1 btn-outline-danger btn-sm" data-mdb-toggle="tooltip"
           title="Remove item">
           <i class="bi bi-trash"></i>
           </button>
         </td>`;
   productItemsList.innerHTML += cartCard;
+  const deleterBtn = document.querySelectorAll("#deleterBtn");
+  deleterBtn.forEach((el) => {
+    el.addEventListener("click", () => {
+      const element =
+        el.parentElement.parentElement.children[0].children[0].children[1]
+          .children[0].innerHTML;
+      const filtredElement = parsedData.filter((item) => item.name != element);
+      localStorage.setItem("data", JSON.stringify(filtredElement));
+      location.reload();
+    });
+  });
 });
 
 
