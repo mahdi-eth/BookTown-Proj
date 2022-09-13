@@ -59,39 +59,3 @@ parsedData.forEach((product, number) => {
 
 
 
-
-
-function whichChild(elem){
-  var  i= 0;
-  while((elem=elem.previousSibling)!=null) ++i;
-  return i;
-}
-
-
-const myTd = document.querySelectorAll("#myTd");
-myTd.forEach(x => {
-  x.className = "align-middle";
-})
-
-setInterval(() => {
-const inputs = document.querySelectorAll("#form1");
-let inputState = 0;
-inputs.forEach((x) => {
-if(x.value == 1)inputState += 1;
-if(inputState == whichChild(x.parentElement.parentElement.parentElement.parentElement) + 1) ;
-})
-}, 1);
-
-
-
-const deleterBtn = document.querySelectorAll("#deleterBtn");
-deleterBtn.forEach((el) => {
-  el.addEventListener("click", () => {
-    const element =
-    el.parentElement.parentElement.children[0].children[0].children[1]
-      .children[0].innerHTML;
-  const filtredElement = parsedData.filter((item) => item.name != element);
-  localStorage.setItem("data", JSON.stringify(filtredElement));
-  location.reload();
-  })
-});
