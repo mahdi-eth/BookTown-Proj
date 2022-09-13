@@ -1,12 +1,23 @@
 const productItemsList = document.getElementById("productItemsList");
-let parsedData = JSON.parse(localStorage.getItem("data"));
 
+let parsedData = JSON.parse(localStorage.getItem("data"));
 let thisIsValueNumber = JSON.parse(localStorage.getItem("valueNumber")) || [];
+
+function whichChild(elem) {
+  var i = 0;
+  while ((elem = elem.previousSibling) != null) ++i;
+  return i;
+}
 
 parsedData.forEach((product, number) => {
   let latestPrice = "";
   if (product.lastprice) {
-    latestPrice = "$" + Number(product.lastprice.slice(1)) * thisIsValueNumber[number] || 1;
+    latestPrice =
+      "$" +
+        Math.round(
+          Number(product.lastprice.slice(1)) * thisIsValueNumber[number] * 100
+        ) /
+          100 || 1;
   }
   const cartCard = `<tr>
         <td scope="row">
@@ -52,7 +63,9 @@ parsedData.forEach((product, number) => {
         <td class="align-middle">
         <strike class="text-secondary">${latestPrice}</strike>
         <p class="mb-0" style="font-weight: 500">$${
-          Math.round(Number(product.price.slice(1)) * thisIsValueNumber[number] * 100)/100 || 1
+          Math.round(
+            Number(product.price.slice(1)) * thisIsValueNumber[number] * 100
+          ) / 100 || 1
         }</p>
           </td>
           <td class="align-middle">
@@ -65,6 +78,14 @@ parsedData.forEach((product, number) => {
   const deleterBtn = document.querySelectorAll("#deleterBtn");
   deleterBtn.forEach((el) => {
     el.addEventListener("click", () => {
+
+      el.parentElement.parentElement.children[1].children[0].children[1].value =
+      el.parentElement.parentElement.parentElement.children[
+        whichChild(el.parentElement.parentElement.parentElement) - 1
+      ].children[1].children[0].children[1].value;
+
+
+
       const element =
         el.parentElement.parentElement.children[0].children[0].children[1]
           .children[0].innerHTML;
@@ -82,16 +103,14 @@ setInterval(() => {
     valueCatcher.push(input.value);
     localStorage.setItem("valueNumber", JSON.stringify(valueCatcher));
   });
-}, 1000);
-
+}, 1);
 
 const btns = document.querySelectorAll(".btn-link");
-
 
 btns.forEach((btn) => {
   btn.addEventListener("click", () => {
     setTimeout(() => {
       location.reload();
-    }, 2000);
-  })
+    }, 1000);
+  });
 });
