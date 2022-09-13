@@ -14,7 +14,8 @@ window.addEventListener("click", (el) => {
         .innerText,
       price:
         el.target.parentElement.parentElement.children[1].children[2]
-          .children[1].innerText,
+          .children[1].innerText.slice(1),
+          value: 1,
       lastprice: (() => {
         if (
           el.target.parentElement.parentElement.children[1].children[2]
@@ -25,7 +26,6 @@ window.addEventListener("click", (el) => {
         }
       })(),
     };
-    // console.log(el.target.parentElement.parentElement.children[1]);
     dataState.push(data);
     localStorage.setItem("data", JSON.stringify(dataState));
   }

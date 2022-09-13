@@ -1,24 +1,8 @@
 const productItemsList = document.getElementById("productItemsList");
 
 let parsedData = JSON.parse(localStorage.getItem("data"));
-let thisIsValueNumber = JSON.parse(localStorage.getItem("valueNumber")) || [];
-
-function whichChild(elem) {
-  var i = 0;
-  while ((elem = elem.previousSibling) != null) ++i;
-  return i;
-}
 
 parsedData.forEach((product, number) => {
-  let latestPrice = "";
-  if (product.lastprice) {
-    latestPrice =
-      "$" +
-        Math.round(
-          Number(product.lastprice.slice(1)) * thisIsValueNumber[number] * 100
-        ) /
-          100 || 1;
-  }
   const cartCard = `<tr>
         <td scope="row">
           <div class="d-flex align-items-center">
@@ -46,7 +30,7 @@ parsedData.forEach((product, number) => {
               id="form1"
               min="1"
               name="quantity"
-              value="${thisIsValueNumber[number] || 1}"
+              value="${product.value}"
               type="number"
               class="form-control form-control-sm"
               style="width: 50px"
@@ -61,56 +45,53 @@ parsedData.forEach((product, number) => {
           </div>
         </td>
         <td class="align-middle">
-        <strike class="text-secondary">${latestPrice}</strike>
-        <p class="mb-0" style="font-weight: 500">$${
-          Math.round(
-            Number(product.price.slice(1)) * thisIsValueNumber[number] * 100
-          ) / 100 || 1
-        }</p>
+        <strike class="text-secondary">${product.lastprice || ""}</strike>
+        <p class="mb-0" style="font-weight: 500">$${product.price}</p>
           </td>
-          <td class="align-middle">
+          <td id="myTd" class="align-middle d-none">
           <button id="deleterBtn" type="button" class="btn ms-4 mt-1 btn-outline-danger btn-sm" data-mdb-toggle="tooltip"
           title="Remove item">
           <i class="bi bi-trash"></i>
           </button>
         </td>`;
   productItemsList.innerHTML += cartCard;
-  const deleterBtn = document.querySelectorAll("#deleterBtn");
-  deleterBtn.forEach((el) => {
-    el.addEventListener("click", () => {
-
-      el.parentElement.parentElement.children[1].children[0].children[1].value =
-      el.parentElement.parentElement.parentElement.children[
-        whichChild(el.parentElement.parentElement.parentElement) - 1
-      ].children[1].children[0].children[1].value;
-
-
-
-      const element =
-        el.parentElement.parentElement.children[0].children[0].children[1]
-          .children[0].innerHTML;
-      const filtredElement = parsedData.filter((item) => item.name != element);
-      localStorage.setItem("data", JSON.stringify(filtredElement));
-      location.reload();
-    });
-  });
 });
 
+
+
+
+
+function whichChild(elem){
+  var  i= 0;
+  while((elem=elem.previousSibling)!=null) ++i;
+  return i;
+}
+
+
+const myTd = document.querySelectorAll("#myTd");
+myTd.forEach(x => {
+  x.className = "align-middle";
+})
+
 setInterval(() => {
-  const productCount = document.querySelectorAll("#form1");
-  let valueCatcher = [];
-  productCount.forEach((input) => {
-    valueCatcher.push(input.value);
-    localStorage.setItem("valueNumber", JSON.stringify(valueCatcher));
-  });
+const inputs = document.querySelectorAll("#form1");
+let inputState = 0;
+inputs.forEach((x) => {
+if(x.value == 1)inputState += 1;
+if(inputState == whichChild(x.parentElement.parentElement.parentElement.parentElement) + 1) ;
+})
 }, 1);
 
-const btns = document.querySelectorAll(".btn-link");
 
-btns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    setTimeout(() => {
-      location.reload();
-    }, 1000);
-  });
+
+const deleterBtn = document.querySelectorAll("#deleterBtn");
+deleterBtn.forEach((el) => {
+  el.addEventListener("click", () => {
+    const element =
+    el.parentElement.parentElement.children[0].children[0].children[1]
+      .children[0].innerHTML;
+  const filtredElement = parsedData.filter((item) => item.name != element);
+  localStorage.setItem("data", JSON.stringify(filtredElement));
+  location.reload();
+  })
 });

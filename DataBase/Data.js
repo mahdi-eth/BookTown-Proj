@@ -813,34 +813,3 @@ export default function books() {
   ];
 }
 
-// console.log(
-  // books().sort(function (a, b) {
-  //   let dateA = new Date(a.date),
-  //     dateB = new Date(b.date);
-  //   return dateA - dateB;
-  // })
-// );
-
-// books().forEach((book) => {
-//   let img = document.createElement("img");
-//   img.src = book.cover;
-//   document.body.appendChild(img);
-
-//   let p = document.createElement("p");
-//   p.innerHTML = book.name;
-//   document.body.appendChild(p);
-
-//   let div = document.createElement("div");
-//   div.innerHTML = book.stars;
-//   document.body.appendChild(div);
-
-//   if (book.deal) {
-//     let span2 = document.createElement("strike");
-//     span2.innerHTML = book.lastPrice;
-//     document.body.appendChild(span2);
-//   }
-
-//   let span = document.createElement("span");
-//   span.innerHTML = book.price;
-//   document.body.appendChild(span);
-// });
