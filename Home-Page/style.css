@@ -181,3 +181,9 @@ h2::after {
 .book-name {
 	min-height: 4.5rem;
 }
+
+.second-navbar-bi-list-clicked {
+	z-index: 1;
+	transition: all ease .5s;
+	top: -40rem;
+}

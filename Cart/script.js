@@ -43,15 +43,14 @@ parsedData.forEach((product, number) => {
   });
 });
 
-
 // proceed to pay modal section
 
-
 const modalBody = document.querySelector(".modal-body");
+let totalPrice = 0;
 
-parsedData.forEach((product, number)=> {
-  const productBody1 = `<tr>
-  <td scope="row">
+parsedData.forEach((product) => {
+  const productBody1 = `<div class="d-flex justify-content-between align-items-center py-3 pe-4">
+  <div class="">
     <div class="d-flex align-items-center">
       <img
         src="${product.cover}"
@@ -63,29 +62,46 @@ parsedData.forEach((product, number)=> {
         <p class="mb-2 d-none d-sm-inline fs-10">${product.name}</p>
       </div>
     </div>
-  </td>
-  <td class="align-middle">
-  </td>
-  <td class="align-middle">
+  </div>
+  <div class="align-middle">
+  </div>
+  <div class="align-middle">
   <strike class="text-secondary">${product.lastprice || ""}</strike>
-  <p class="mb-0 d-inline" style="font-weight: 500">$${product.price}</p>
-    </td>`;
+  <p class="mb-0" style="font-weight: 500">$${product.price}</p>
+    </div>
+    </div>`;
   modalBody.innerHTML += productBody1;
+  totalPrice += Math.round(Number(product.price) * 100) / 100;
 });
-
-
-
 
 const modalBody2 = document.querySelector(".modal-body-2");
 
-const productBody2 = ` <div class="mb-5">
+function modalBody2Creator() {
+  totalPrice = Math.round(totalPrice * 100) / 100;
+  const productBody2 = ` <div class="mb-5">
 <div class="form-floating">
-  <input type="text" class="form-control" id="form3Examplea2" placeholder="Enter your discount code">
-  <label class="form-label" for="form3Examplea2">Enter your discount code</label>
+  <input type="number" class="form-control border border-danger border-opacity-25" id="form3Examplea2" placeholder="v">
+  <label class="form-label" for="form3Examplea2">Enter your discount code (for e.g. Enter a number(1,90))</label>
 </div>
 </div>
 <div class="d-flex justify-content-between">
 <h5 class="text-uppercase">Total price : </h5>
-<h5>$ ${product.price} </h5>
+<h5>$${totalPrice}</h5>
 </div>`;
+
   modalBody2.innerHTML = productBody2;
+}
+
+modalBody2Creator();
+
+// discount code process
+
+const formControlDiscount = document.querySelector(".form-control");
+
+formControlDiscount.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    const discountNum = formControlDiscount.value;
+    totalPrice -= totalPrice * discountNum / 100;
+    modalBody2Creator();
+  }
+});
