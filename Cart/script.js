@@ -18,33 +18,6 @@ parsedData.forEach((product, number) => {
           </div>
         </td>
         <td class="align-middle">
-          <div class="d-flex flex-row">
-            <button
-              class="btn btn-link px-2 me-2"
-              onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-            >
-              <i class="bi bi-dash-lg text-danger"></i>
-            </button>
-        
-            <input
-              id="form1"
-              min="1"
-              name="quantity"
-              value="${product.value}"
-              type="number"
-              class="form-control form-control-sm"
-              style="width: 50px"
-            />
-        
-            <button
-              class="btn btn-link px-2 ms-2"
-              onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-            >
-              <i class="bi bi-plus-lg text-danger"></i>
-            </button>
-          </div>
-        </td>
-        <td class="align-middle">
         <strike class="text-secondary">${product.lastprice || ""}</strike>
         <p class="mb-0" style="font-weight: 500">$${product.price}</p>
           </td>
@@ -53,7 +26,9 @@ parsedData.forEach((product, number) => {
           title="Remove item">
           <i class="bi bi-trash"></i>
           </button>
-        </td>`;
+        </td>
+        </tr>
+        `;
   productItemsList.innerHTML += cartCard;
   const deleterBtn = document.querySelectorAll("#deleterBtn");
   deleterBtn.forEach((el) => {
@@ -69,4 +44,48 @@ parsedData.forEach((product, number) => {
 });
 
 
+// proceed to pay modal section
 
+
+const modalBody = document.querySelector(".modal-body");
+
+parsedData.forEach((product, number)=> {
+  const productBody1 = `<tr>
+  <td scope="row">
+    <div class="d-flex align-items-center">
+      <img
+        src="${product.cover}"
+        class="img-fluid rounded-3"
+        style="width: 120px"
+        alt="Book"
+      />
+      <div class="flex-column ms-4">
+        <p class="mb-2 d-none d-sm-inline fs-10">${product.name}</p>
+      </div>
+    </div>
+  </td>
+  <td class="align-middle">
+  </td>
+  <td class="align-middle">
+  <strike class="text-secondary">${product.lastprice || ""}</strike>
+  <p class="mb-0 d-inline" style="font-weight: 500">$${product.price}</p>
+    </td>`;
+  modalBody.innerHTML += productBody1;
+});
+
+
+
+
+const modalBody2 = document.querySelector(".modal-body-2");
+
+const productBody2 = ` <div class="mb-5">
+<div class="form-floating">
+  <input type="text" class="form-control" id="form3Examplea2" placeholder="Enter your discount code">
+  <label class="form-label" for="form3Examplea2">Enter your discount code</label>
+</div>
+</div>
+<div class="d-flex justify-content-between">
+<h5 class="text-uppercase">Total price : </h5>
+<h5>$ ${product.price} </h5>
+</div>`;
+  modalBody2.innerHTML = productBody2;

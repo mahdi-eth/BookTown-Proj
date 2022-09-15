@@ -1,0 +1,9 @@
+.modal-body {
+    max-height: 19rem;
+    overflow: scroll;
+}
+
+.modal-body-2 {
+    max-height: 6rem;
+    overflow: scroll;
+}

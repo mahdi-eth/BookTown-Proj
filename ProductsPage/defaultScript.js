@@ -118,5 +118,6 @@ biList.addEventListener("click", () => {
 
 closeListBtn.addEventListener("click", () => {
   secondNavbarBiListClicked.style.top = "-40rem";
+  location.reload();
 })
 

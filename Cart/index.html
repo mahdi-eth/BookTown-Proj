@@ -14,6 +14,7 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./style.css">
     <title>BookTown Cart Page</title>
   </head>
   <body>
@@ -26,8 +27,7 @@
                 <thead>
                   <tr>
                     <th scope="col" class="h5">Shopping Bag</th>
-                    <th scope="col" class="ps-5">Quantity</th>
-                    <th scope="col">Price(one Book)</th>
+                    <th scope="col">Price</th>
                   </tr>
                 </thead>
                 <tbody id="productItemsList"></tbody>
@@ -40,9 +40,39 @@
                 <button
                   type="button"
                   class="btn btn-danger btn-block btn-lg w-100"
+                  data-bs-toggle="modal" data-bs-target="#staticBackdrop"
                 >
                   Proceed to Pay
                 </button>
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Are you sure about your purchase?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                      </div>
+                      <hr class="my-2">
+                      <div class="modal-body-2 px-4">
+                        <div class="mb-5">
+                          <div class="form-floating">
+                            <input type="text" class="form-control" id="form3Examplea2" placeholder="Enter your discount code">
+                            <label class="form-label" for="form3Examplea2">Enter your discount code</label>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <h5 class="text-uppercase">Total price</h5>
+                          <h5>$ </h5>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+                        <button onclick="window.open('http://127.0.0.1:5500/PaymentPage/index.html','_self','resizable=yes')" type="button" class="btn btn-danger">Go To Payment Page</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
