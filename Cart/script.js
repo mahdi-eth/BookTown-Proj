@@ -2,8 +2,21 @@ const productItemsList = document.getElementById("productItemsList");
 
 let parsedData = JSON.parse(localStorage.getItem("data"));
 
+
+
+function removeItemOnce(arr, value) {
+  var index = arr.indexOf(value);
+  if (index > -1) {
+    arr.splice(index, 1);
+  }
+  return arr
+}
+
+
+
+
 parsedData.forEach((product, number) => {
-    const cartCard = `<tr>
+  const cartCard = `<tr>
         <td scope="row">
           <div class="d-flex align-items-center">
             <img
@@ -20,7 +33,7 @@ parsedData.forEach((product, number) => {
         </td>
         <td id="myAdderTd" class="align-middle">
         <button id="adderBtn" type="button" class="btn border-0 ms-4 mt-1 btn-outline-danger btn-sm" data-mdb-toggle="tooltip"
-        title="Remove item">
+        title="Duplicate item">
         <i class="bi bi-plus-lg"></i>
         </button>
       </td>
@@ -32,6 +45,7 @@ parsedData.forEach((product, number) => {
           <button id="deleterBtn" type="button" class="btn ms-4 mt-1 btn-outline-danger btn-sm" data-mdb-toggle="tooltip"
           title="Remove item">
           <i class="bi bi-trash"></i>
+        <div class="d-none">${product.value}</div>
           </button>
         </td>
         </tr>
@@ -42,23 +56,71 @@ parsedData.forEach((product, number) => {
   const deleterBtn = document.querySelectorAll("#deleterBtn");
   deleterBtn.forEach((el) => {
     el.addEventListener("click", () => {
-      const element =
-        el.parentElement.parentElement.children[0].children[0].children[1]
-          .children[0].innerHTML;
-      const filtredElement = parsedData.filter((item) => item.name != element);
-      localStorage.setItem("data", JSON.stringify(filtredElement));
+      const elementName =
+      el.parentElement.parentElement.innerHTML;
+      const elementValue =
+        el.parentElement.parentElement.children[3].children[0].children[1].innerHTML;
+      const filtredElementByName = parsedData.filter((item) => item.name != elementName);
+      const filtredElementByValue = parsedData.filter((item) => item.value != elementValue);
+      console.log(filtredElement);
+      // console.log(parsedData.filter(item => item));
+      // localStorage.setItem("data", JSON.stringify(filtredElement));
+      // location.reload();
+    });
+    // el.addEventListener("click", () => {
+    //   let data = {
+    //     cover:
+    //       el.parentElement.parentElement.children[0].children[0].children[0]
+    //         .src,
+    //     name: el.parentElement.parentElement.children[0].children[0].children[1]
+    //       .innerText,
+    //     price:
+    //       el.parentElement.parentElement.children[2].children[1].innerText.slice(
+    //         1
+    //       ),
+    //     value: 1,
+    //     lastprice: (() => {
+    //       if (el.parentElement.parentElement.innerText) {
+    //         return el.parentElement.parentElement.children[2].children[0]
+    //           .innerText;
+    //       }
+    //     })(),
+    //   };
+    //   console.log(parsedData,data);
+    //   // parsedData.push(data);
+    //   // localStorage.setItem("data", JSON.stringify(parsedData));
+    //   // location.reload();
+    // });
+  });
+
+  const adderBtn = document.querySelectorAll("#adderBtn");
+  adderBtn.forEach((el) => {
+
+    el.addEventListener("click", () => {
+      let data = {
+        cover:
+          el.parentElement.parentElement.children[0].children[0].children[0]
+            .src,
+        name: el.parentElement.parentElement.children[0].children[0].children[1]
+          .innerText,
+        price:
+          el.parentElement.parentElement.children[2].children[1].innerText.slice(
+            1
+          ),
+        value: Date.now(),
+        lastprice: (() => {
+          if (el.parentElement.parentElement.innerText) {
+            return el.parentElement.parentElement.children[2].children[0]
+              .innerText;
+          }
+        })(),
+      };
+      console.log(data.value);
+      parsedData.push(data);
+      localStorage.setItem("data", JSON.stringify(parsedData));
       location.reload();
     });
   });
-
-  // const adderBtn = document.querySelectorAll("#adderBtn");
-  // adderBtn.forEach((el) => {
-  //   el.addEventListener("click", () => {
-  //     creation();
-  //     localStorage.setItem("data", JSON.stringify(filtredElement));
-  //     location.reload();
-  //   });
-  // });
 });
 
 // proceed to pay modal section
