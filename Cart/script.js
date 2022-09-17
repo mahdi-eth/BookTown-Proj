@@ -1,22 +1,10 @@
 const productItemsList = document.getElementById("productItemsList");
 
-let parsedData = JSON.parse(localStorage.getItem("data"));
+let parsedData = JSON.parse(localStorage.getItem("data")) || [];
 
-
-
-function removeItemOnce(arr, value) {
-  var index = arr.indexOf(value);
-  if (index > -1) {
-    arr.splice(index, 1);
-  }
-  return arr
-}
-
-
-
-
-parsedData.forEach((product, number) => {
-  const cartCard = `<tr>
+if (parsedData) {
+  parsedData.forEach((product, number) => {
+    const cartCard = `<tr>
         <td scope="row">
           <div class="d-flex align-items-center">
             <img
@@ -51,77 +39,51 @@ parsedData.forEach((product, number) => {
         </tr>
         `;
 
-  productItemsList.innerHTML += cartCard;
+    productItemsList.innerHTML += cartCard;
 
-  const deleterBtn = document.querySelectorAll("#deleterBtn");
-  deleterBtn.forEach((el) => {
-    el.addEventListener("click", () => {
-      const elementName =
-      el.parentElement.parentElement.innerHTML;
-      const elementValue =
-        el.parentElement.parentElement.children[3].children[0].children[1].innerHTML;
-      const filtredElementByName = parsedData.filter((item) => item.name != elementName);
-      const filtredElementByValue = parsedData.filter((item) => item.value != elementValue);
-      console.log(filtredElement);
-      // console.log(parsedData.filter(item => item));
-      // localStorage.setItem("data", JSON.stringify(filtredElement));
-      // location.reload();
+    const deleterBtn = document.querySelectorAll("#deleterBtn");
+    deleterBtn.forEach((el) => {
+      el.addEventListener("click", () => {
+        const elementValue =
+          el.parentElement.parentElement.children[3].children[0].children[1]
+            .innerHTML;
+        const filtredElementByValue = parsedData.filter(
+          (item) => item.value != elementValue
+        );
+        localStorage.setItem("data", JSON.stringify(filtredElementByValue));
+        location.reload();
+      });
     });
-    // el.addEventListener("click", () => {
-    //   let data = {
-    //     cover:
-    //       el.parentElement.parentElement.children[0].children[0].children[0]
-    //         .src,
-    //     name: el.parentElement.parentElement.children[0].children[0].children[1]
-    //       .innerText,
-    //     price:
-    //       el.parentElement.parentElement.children[2].children[1].innerText.slice(
-    //         1
-    //       ),
-    //     value: 1,
-    //     lastprice: (() => {
-    //       if (el.parentElement.parentElement.innerText) {
-    //         return el.parentElement.parentElement.children[2].children[0]
-    //           .innerText;
-    //       }
-    //     })(),
-    //   };
-    //   console.log(parsedData,data);
-    //   // parsedData.push(data);
-    //   // localStorage.setItem("data", JSON.stringify(parsedData));
-    //   // location.reload();
-    // });
-  });
 
-  const adderBtn = document.querySelectorAll("#adderBtn");
-  adderBtn.forEach((el) => {
-
-    el.addEventListener("click", () => {
-      let data = {
-        cover:
-          el.parentElement.parentElement.children[0].children[0].children[0]
-            .src,
-        name: el.parentElement.parentElement.children[0].children[0].children[1]
-          .innerText,
-        price:
-          el.parentElement.parentElement.children[2].children[1].innerText.slice(
-            1
-          ),
-        value: Date.now(),
-        lastprice: (() => {
-          if (el.parentElement.parentElement.innerText) {
-            return el.parentElement.parentElement.children[2].children[0]
-              .innerText;
-          }
-        })(),
-      };
-      console.log(data.value);
-      parsedData.push(data);
-      localStorage.setItem("data", JSON.stringify(parsedData));
-      location.reload();
+    const adderBtn = document.querySelectorAll("#adderBtn");
+    adderBtn.forEach((el) => {
+      el.addEventListener("click", () => {
+        let data = {
+          cover:
+            el.parentElement.parentElement.children[0].children[0].children[0]
+              .src,
+          name: el.parentElement.parentElement.children[0].children[0]
+            .children[1].innerText,
+          price:
+            el.parentElement.parentElement.children[2].children[1].innerText.slice(
+              1
+            ),
+          value: Math.random() * 10e60,
+          lastprice: (() => {
+            if (el.parentElement.parentElement.innerText) {
+              return el.parentElement.parentElement.children[2].children[0]
+                .innerText;
+            }
+          })(),
+        };
+        console.log(data.value);
+        parsedData.push(data);
+        localStorage.setItem("data", JSON.stringify(parsedData));
+        location.reload();
+      });
     });
   });
-});
+}
 
 // proceed to pay modal section
 
@@ -176,14 +138,17 @@ modalBody2Creator();
 
 // discount code process
 
+
 const formControlDiscount = document.querySelector(".form-control");
 
 formControlDiscount.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     const discountNum = formControlDiscount.value;
     if (discountNum <= 70 && discountNum >= 1) {
-      totalPrice -= (totalPrice * discountNum) / 100;
-      modalBody2Creator();
+      setTimeout(() => {
+        totalPrice -= (totalPrice * discountNum) / 100;
+        modalBody2Creator();
+      }, 500);
     }
   }
 });

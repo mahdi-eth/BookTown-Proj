@@ -15,7 +15,7 @@ window.addEventListener("click", (el) => {
       price:
         el.target.parentElement.parentElement.children[1].children[2]
           .children[1].innerText.slice(1),
-          value: 1,
+          value: Math.random() * 10e60,
       lastprice: (() => {
         if (
           el.target.parentElement.parentElement.children[1].children[2]
