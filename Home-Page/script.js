@@ -148,3 +148,4 @@ sortednovelsPerRate.slice(4,8).forEach(book => {
 sortednovelsPerRate.slice(8,12).forEach(book => {
     bestNovelsCarouselItem3.innerHTML += (cartCreator(book));
 })
+

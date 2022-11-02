@@ -3,6 +3,7 @@ import books from "../DataBase/Data.js";
 export const sortElement = document.querySelector(".sorted-by");
 export const dropdownItems = document.querySelectorAll("#dropdownItem");
 export const main = document.querySelector("#thumb");
+
 export const categorieSelector = [
   ...document.querySelectorAll("#categorieSelector"),
 ];
@@ -104,12 +105,11 @@ categorieSelector.forEach((el) => {
   });
 });
 
-
 // send data to cart section
 
 let dataState = JSON.parse(localStorage.getItem("data")) || [];
 
-if (localStorage.getItem("data") == null){
+if (localStorage.getItem("data") == null) {
   dataState = [];
 }
 
@@ -120,9 +120,10 @@ window.addEventListener("click", (el) => {
       name: el.target.parentElement.parentElement.children[1].children[0]
         .innerText,
       price:
-        el.target.parentElement.parentElement.children[1].children[2]
-          .children[1].innerText.slice(1),
-          value: 1,
+        el.target.parentElement.parentElement.children[1].children[2].children[1].innerText.slice(
+          1
+        ),
+      value: 1,
       lastprice: (() => {
         if (
           el.target.parentElement.parentElement.children[1].children[2]
@@ -138,32 +139,30 @@ window.addEventListener("click", (el) => {
   }
 });
 
-
-
 // added to cart , alert section
 
 window.addEventListener("click", (el) => {
-  if (el.target.innerText == "Add to Cart "){
+  if (el.target.innerText == "Add to Cart ") {
     alert(`${el.target.parentElement.children[0].innerText} Added to cart!`);
-}});
-
-
-
+  }
+});
 
 // bi-list section
 
 const biList = document.querySelector(".bi-list");
-const secondNavbarBiListClicked  = document.querySelector(".second-navbar-bi-list-clicked");
-const closeListBtn  = document.querySelector(".close-list-btn");
+const secondNavbarBiListClicked = document.querySelector(
+  ".second-navbar-bi-list-clicked"
+);
+const closeListBtn = document.querySelector(".close-list-btn");
 
 biList.addEventListener("click", () => {
   secondNavbarBiListClicked.style.top = "0rem";
-})
+});
 
 closeListBtn.addEventListener("click", () => {
   secondNavbarBiListClicked.style.top = "-40rem";
   setTimeout(() => {
     location.reload();
   }, 500);
-})
+});
 
