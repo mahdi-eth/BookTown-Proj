@@ -18,6 +18,8 @@ defaultCondition();
 
 // search section
 
+const main = document.querySelector("#thumb");
+
 const searchBar = document.querySelector(".searchBar");
 
 setInterval(() => {
