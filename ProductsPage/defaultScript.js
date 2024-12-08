@@ -3,6 +3,7 @@ import books from "../DataBase/Data.js";
 export const sortElement = document.querySelector(".sorted-by");
 export const dropdownItems = document.querySelectorAll("#dropdownItem");
 export const main = document.querySelector("#thumb");
+export let cartCountid = document.getElementById("cartCount");
 
 export const categorieSelector = [
   ...document.querySelectorAll("#categorieSelector"),
@@ -13,7 +14,7 @@ dropdownItems.forEach((el) => {
     sortElement.innerHTML = ` : ${e.target.innerHTML}`;
   });
 });
-
+  getCartCount()
 export default function productMaker(bookData) {
   bookData.forEach((book) => {
     main.innerHTML += `<div class="thumb-wrapper flex-column shadow">
@@ -136,16 +137,23 @@ window.addEventListener("click", (el) => {
     };
     dataState.push(data);
     localStorage.setItem("data", JSON.stringify(dataState));
+    getCartCount();
   }
+
 });
 
 // added to cart , alert section
 
+
+
+// Replace the alert with showNotification
 window.addEventListener("click", (el) => {
   if (el.target.innerText == "Add to Cart ") {
-    alert(`${el.target.parentElement.children[0].innerText} Added to cart!`);
+    const bookName = el.target.parentElement.children[0].innerText;
+    el.stopImmediatePropagation();
   }
 });
+
 
 // bi-list section
 
@@ -166,3 +174,16 @@ closeListBtn.addEventListener("click", () => {
   }, 500);
 });
 
+function getCartCount() {
+  let dataState = JSON.parse(localStorage.getItem("data")) || [];
+
+if (localStorage.getItem("data") == null) {
+  dataState = [];
+}
+  let cartCountList = 0;
+  localStorage.setItem("data", JSON.stringify(dataState));
+  cartCountList = dataState?.length;
+  if (cartCountList != null && cartCountList != undefined) {
+    cartCountid.innerHTML = cartCountList;
+  }
+}
