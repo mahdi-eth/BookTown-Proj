@@ -81,6 +81,7 @@ h2::after {
 	text-align: center;
 	position: relative;
 	box-shadow: 0 .2rem .3rem rgba(0,0,0,0.2);
+    margin-bottom: 20px;
 }
 .carousel .item .img-box {
 	height: 12.0rem;
@@ -262,7 +263,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 .new_footer_top .f_social_icon a {
     width: 44px;
     height: 44px;
-    line-height: 43px;
+    line-height: 34px;
     background: transparent;
     border: 1px solid #e2e2eb;
     font-size: 24px;
@@ -330,6 +331,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .new_footer_top .f_widget.about-widget .f_list li a {
     color: #6a7695;
+    font-size: 16px;
 }
 
 
